@@ -1,2 +1,26 @@
+com/proyectoweb/barberia/models/User.java
+ com.proyectoweb.barberia.models.User
 com/proyectoweb/barberia/BarberiaApplication.java
  com.proyectoweb.barberia.BarberiaApplication
+com/proyectoweb/barberia/services/UserServiceRepository.java
+ com.proyectoweb.barberia.services.UserServiceRepository
+com/proyectoweb/barberia/services/UserServiceImpl.java
+ com.proyectoweb.barberia.services.UserServiceImpl
+com/proyectoweb/barberia/security/JWTAuthorizationFilter.java
+ com.proyectoweb.barberia.security.JWTAuthorizationFilter
+com/proyectoweb/barberia/services/ProductServiceRepository.java
+ com.proyectoweb.barberia.services.ProductServiceRepository
+com/proyectoweb/barberia/controllers/ProductController.java
+ com.proyectoweb.barberia.controllers.ProductController
+com/proyectoweb/barberia/controllers/UserController.java
+ com.proyectoweb.barberia.controllers.UserController
+com/proyectoweb/barberia/models/Product.java
+ com.proyectoweb.barberia.models.Product
+com/proyectoweb/barberia/services/ProductServiceImpl.java
+ com.proyectoweb.barberia.services.ProductServiceImpl
+com/proyectoweb/barberia/services/ProductService.java
+ com.proyectoweb.barberia.services.ProductService
+com/proyectoweb/barberia/services/UserService.java
+ com.proyectoweb.barberia.services.UserService
+com/proyectoweb/barberia/security/WebSecurityConfig.java
+ com.proyectoweb.barberia.security.WebSecurityConfig
