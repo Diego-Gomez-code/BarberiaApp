@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.proyectoweb.barberia.Users.User.Domain.User" table="Users">
+        <composite-id name="userId" class="com.proyectoweb.barberia.Shared.Domain.Users.UserId" access="field" >
+            <key-property name="value" column="idUser" access="field" length="11"/>
+        </composite-id>
+
+        <component name="userFirstName" class="com.proyectoweb.barberia.Users.User.Domain.UserFirstName" access="field" >
+            <property name="value" column="firstname" access="field" type="string"/>
+        </component>
+
+        <component name="userLastName" class="com.proyectoweb.barberia.Users.User.Domain.UserLastName" access="field" >
+            <property name="value" column="lastname" access="field" type="string" />
+        </component>
+
+        <component name="userName" class="com.proyectoweb.barberia.Users.User.Domain.UserName" access="field" >
+            <property name="value" column="username" access="field" type="string" />
+        </component>
+
+        <component name="userPassword" class="com.proyectoweb.barberia.Users.User.Domain.UserPassword" access="field" >
+            <property name="value" column="password" access="field" type="string" />
+        </component>
+    </class>
+</hibernate-mapping>

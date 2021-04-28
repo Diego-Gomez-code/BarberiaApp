@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
+
+    <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
+
+    <bean id="userCreator" class="com.proyectoweb.barberia.Users.User.Application.Create.UserCreator">
+        <constructor-arg ref="HibernateUserRepository"/>
+        <constructor-arg ref="BadWordService"/>
+    </bean>
+
+</beans>

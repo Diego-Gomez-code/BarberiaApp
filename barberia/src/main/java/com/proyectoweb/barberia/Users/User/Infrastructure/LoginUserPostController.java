@@ -14,7 +14,7 @@ import java.awt.*;
 public class LoginUserPostController {
     /*
     @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> execute(@RequestBody UserLogin user){
+    public ResponseEntity<Token> execute(@RequestBody UserLogin user){
         //TODO: login
     }
     */
