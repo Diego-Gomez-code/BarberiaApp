@@ -14,8 +14,12 @@ com/proyectoweb/barberia/Users/User/Domain/LengthNotValid.java
  com.proyectoweb.barberia.Users.User.Domain.LengthNotValid
 com/proyectoweb/barberia/Reservations/Reservation/Infrastructure/CreateReservationPostController.java
  com.proyectoweb.barberia.Reservations.Reservation.Infrastructure.CreateReservationPostController
-com/proyectoweb/barberia/Shared/Application/Response.java
- com.proyectoweb.barberia.Shared.Application.Response
+com/proyectoweb/barberia/Users/User/Infrastructure/SignupUserPostController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.Request
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$1
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$2
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$3
 com/proyectoweb/barberia/Products/Product/Infrastructure/ProductsGetController.java
  com.proyectoweb.barberia.Products.Product.Infrastructure.ProductsGetController
 com/proyectoweb/barberia/Users/User/Infrastructure/DeleteUserDeleteController.java
@@ -91,9 +95,5 @@ com/proyectoweb/barberia/security/JWTAuthorizationFilter.java
  com.proyectoweb.barberia.security.JWTAuthorizationFilter
 com/proyectoweb/barberia/Users/User/Domain/UserName.java
  com.proyectoweb.barberia.Users.User.Domain.UserName
-com/proyectoweb/barberia/Users/User/Infrastructure/SignupUserPostController.java
- com.proyectoweb.barberia.Users.User.Infrastructure.Request
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$1
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$2
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$3
+com/proyectoweb/barberia/Shared/Application/Response.java
+ com.proyectoweb.barberia.Shared.Application.Response
