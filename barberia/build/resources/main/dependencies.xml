@@ -22,4 +22,8 @@
     <bean id="userFinder" class="com.proyectoweb.barberia.Users.User.Application.Find.UserFinder">
         <constructor-arg ref="HibernateUserRepository"/>
     </bean>
+
+    <bean id="userAll" class="com.proyectoweb.barberia.Users.User.Application.All.UserAll">
+        <constructor-arg ref="HibernateUserRepository"/>
+    </bean>
 </beans>
