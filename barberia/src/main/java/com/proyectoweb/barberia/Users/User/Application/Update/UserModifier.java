@@ -18,11 +18,11 @@ public class UserModifier {
         this.validator = new UserValidateWords(service);
     }
 
-    public void execute(String userId, String userFirstName, String userLastName, String userName){
+    public void execute(String userId, String userFirstName, String userLastName, String userName, String userEmail){
         validator.execute(new UserName(userName).value());
         Optional<User> actualUser = finder.execute(userId);
         User oldUser = actualUser.get();
-        oldUser.updateUser(new UserFirstName(userFirstName), new UserLastName(userLastName), new UserName(userName));
+        oldUser.updateUser(new UserFirstName(userFirstName), new UserLastName(userLastName), new UserName(userName), new UserEmail(userEmail));
         repository.update(userId, oldUser);
     }
 }

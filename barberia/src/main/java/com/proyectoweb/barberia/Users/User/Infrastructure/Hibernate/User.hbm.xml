@@ -20,6 +20,10 @@
             <property name="value" column="username" access="field" type="string" />
         </component>
 
+        <component name="userEmail" class="com.proyectoweb.barberia.Users.User.Domain.UserEmail" access="field">
+            <property name="value" column="email" access="field" type="string" />
+        </component>
+
         <component name="userPassword" class="com.proyectoweb.barberia.Users.User.Domain.UserPassword" access="field" >
             <property name="value" column="password" access="field" type="string" />
         </component>

@@ -11,22 +11,25 @@ public class User {
     private UserFirstName userFirstName;
     private UserLastName userLastName;
     private UserName userName;
+    private UserEmail userEmail;
     private UserPassword userPassword;
 
-    public User(UserId userId, UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserPassword userPassword) {
+    public User(UserId userId, UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserEmail userEmail, UserPassword userPassword) {
         this.userId = userId;
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userName = userName;
+        this.userEmail = userEmail;
         this.userPassword = userPassword;
     }
 
     public User(){}
 
-    public void updateUser(UserFirstName userFirstName, UserLastName userLastName, UserName userName){
+    public void updateUser(UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserEmail userEmail){
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userName = userName;
+        this.userEmail = userEmail;
     }
 
     public boolean equalsById(String otherId) {
@@ -39,6 +42,7 @@ public class User {
             put("firstname", userFirstName.value());
             put("lastname", userLastName.value());
             put("username", userName.value());
+            put("email", userEmail.value());
         }};
         return data;
     }
@@ -52,6 +56,7 @@ public class User {
                 Objects.equals(userFirstName, user.userFirstName) &&
                 Objects.equals(userLastName, user.userLastName) &&
                 Objects.equals(userName, user.userName) &&
-                Objects.equals(userPassword, user.userPassword);
+                Objects.equals(userPassword, user.userPassword) &&
+                Objects.equals(userEmail, user.userEmail);
     }
 }

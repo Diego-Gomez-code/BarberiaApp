@@ -20,7 +20,7 @@ public final class SignupUserPostController {
 
     @PostMapping(value = "/signup", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity execute(@RequestBody Request request){
-        creator.execute(request.getUserId(), request.getFirstName(), request.getLastName(), request.getUserName(), request.getPassword());
+        creator.execute(request.getUserId(), request.getFirstName(), request.getLastName(), request.getUserName(), request.getEmail(), request.getPassword());
         return ResponseEntity.status(HttpStatus.CREATED).body(null);
     }
 
@@ -57,6 +57,7 @@ class Request {
     private String firstName;
     private String lastName;
     private String userName;
+    private String email;
     private String password;
 
     public String getUserId() {
@@ -97,5 +98,13 @@ class Request {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
