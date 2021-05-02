@@ -9,6 +9,8 @@ public class UserFirstName extends StringValueObject {
         this.value = value;
     }
 
+    public UserFirstName(){}
+
     private void validate(String value){
         this.lengthRule(value);
     }

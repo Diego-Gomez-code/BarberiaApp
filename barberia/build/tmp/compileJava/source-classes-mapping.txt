@@ -1,11 +1,11 @@
-com/proyectoweb/barberia/Users/User/Application/Create/UserCreator.java
- com.proyectoweb.barberia.Users.User.Application.Create.UserCreator
+com/proyectoweb/barberia/Users/User/Infrastructure/LoginUserPostController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.LoginUserPostController
+ com.proyectoweb.barberia.Users.User.Infrastructure.Requestt
 com/proyectoweb/barberia/Users/User/Infrastructure/BadWordsService.java
  com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService
  com.proyectoweb.barberia.Users.User.Infrastructure.Response
-com/proyectoweb/barberia/Users/User/Domain/UserPassword.java
- com.proyectoweb.barberia.Users.User.Domain.UserPassword
- com.proyectoweb.barberia.Users.User.Domain.UserPassword$1
+com/proyectoweb/barberia/Shared/Domain/CustomUUID.java
+ com.proyectoweb.barberia.Shared.Domain.CustomUUID
 com/proyectoweb/barberia/Users/User/Domain/UserNotExist.java
  com.proyectoweb.barberia.Users.User.Domain.UserNotExist
 com/proyectoweb/barberia/Products/Product/Infrastructure/CreateProductPostController.java
@@ -14,12 +14,8 @@ com/proyectoweb/barberia/Users/User/Domain/LengthNotValid.java
  com.proyectoweb.barberia.Users.User.Domain.LengthNotValid
 com/proyectoweb/barberia/Reservations/Reservation/Infrastructure/CreateReservationPostController.java
  com.proyectoweb.barberia.Reservations.Reservation.Infrastructure.CreateReservationPostController
-com/proyectoweb/barberia/Users/User/Infrastructure/SignupUserPostController.java
- com.proyectoweb.barberia.Users.User.Infrastructure.Request
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$1
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$2
- com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$3
+com/proyectoweb/barberia/Reservations/Reservation/Infrastructure/ReservationsGetController.java
+ com.proyectoweb.barberia.Reservations.Reservation.Infrastructure.ReservationsGetController
 com/proyectoweb/barberia/Products/Product/Infrastructure/ProductsGetController.java
  com.proyectoweb.barberia.Products.Product.Infrastructure.ProductsGetController
 com/proyectoweb/barberia/Users/User/Infrastructure/DeleteUserDeleteController.java
@@ -28,14 +24,16 @@ com/proyectoweb/barberia/Products/Product/Infrastructure/DetailProductGetControl
  com.proyectoweb.barberia.Products.Product.Infrastructure.DetailProductGetController
 com/proyectoweb/barberia/Shared/Domain/UUIDNotValid.java
  com.proyectoweb.barberia.Shared.Domain.UUIDNotValid
-com/proyectoweb/barberia/Users/User/Domain/UserLastName.java
- com.proyectoweb.barberia.Users.User.Domain.UserLastName
+com/proyectoweb/barberia/Users/User/Domain/UserFirstName.java
+ com.proyectoweb.barberia.Users.User.Domain.UserFirstName
 com/proyectoweb/barberia/Users/User/Domain/BadWordsError.java
  com.proyectoweb.barberia.Users.User.Domain.BadWordsError
 com/proyectoweb/barberia/Services/Service/Infrastructure/ServicesGetController.java
  com.proyectoweb.barberia.Services.Service.Infrastructure.ServicesGetController
-com/proyectoweb/barberia/Users/User/Infrastructure/LoginUserPostController.java
- com.proyectoweb.barberia.Users.User.Infrastructure.LoginUserPostController
+com/proyectoweb/barberia/Users/User/Infrastructure/FindUserGetController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.FindUserGetController
+ com.proyectoweb.barberia.Users.User.Infrastructure.FindUserGetController$1
+ com.proyectoweb.barberia.Users.User.Infrastructure.FindUserGetController$2
 com/proyectoweb/barberia/Shared/Domain/StringValueObject.java
  com.proyectoweb.barberia.Shared.Domain.StringValueObject
 com/proyectoweb/barberia/Shared/Domain/IntegerValueObject.java
@@ -56,8 +54,8 @@ com/proyectoweb/barberia/BarberiaApplication.java
  com.proyectoweb.barberia.BarberiaApplication
 com/proyectoweb/barberia/Shared/Domain/DoubleValueObject.java
  com.proyectoweb.barberia.Shared.Domain.DoubleValueObject
-com/proyectoweb/barberia/security/WebSecurityConfig.java
- com.proyectoweb.barberia.security.WebSecurityConfig
+com/proyectoweb/barberia/Shared/Application/Response.java
+ com.proyectoweb.barberia.Shared.Application.Response
 com/proyectoweb/barberia/Services/Service/Infrastructure/DetailServiceGetController.java
  com.proyectoweb.barberia.Services.Service.Infrastructure.DetailServiceGetController
 com/proyectoweb/barberia/Products/Product/Infrastructure/DeleteProductDeleteController.java
@@ -66,34 +64,51 @@ com/proyectoweb/barberia/Shared/Domain/Users/UserId.java
  com.proyectoweb.barberia.Shared.Domain.Users.UserId
 com/proyectoweb/barberia/Users/User/Domain/UserValidateWords.java
  com.proyectoweb.barberia.Users.User.Domain.UserValidateWords
-com/proyectoweb/barberia/Users/User/Domain/UserDomainFinder.java
- com.proyectoweb.barberia.Users.User.Domain.UserDomainFinder
+com/proyectoweb/barberia/security/JWTAuthorizationFilter.java
+ com.proyectoweb.barberia.security.JWTAuthorizationFilter
 com/proyectoweb/barberia/Users/User/Domain/ValidateWordService.java
  com.proyectoweb.barberia.Users.User.Domain.ValidateWordService
-com/proyectoweb/barberia/Users/User/Domain/UserFirstName.java
- com.proyectoweb.barberia.Users.User.Domain.UserFirstName
-com/proyectoweb/barberia/Users/User/Infrastructure/Hibernate/HibernateUserRepository.java
- com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository
-com/proyectoweb/barberia/Users/User/Domain/UserRepository.java
- com.proyectoweb.barberia.Users.User.Domain.UserRepository
+com/proyectoweb/barberia/Users/User/Domain/UpperLowerError.java
+ com.proyectoweb.barberia.Users.User.Domain.UpperLowerError
+com/proyectoweb/barberia/Users/User/Domain/UserName.java
+ com.proyectoweb.barberia.Users.User.Domain.UserName
+com/proyectoweb/barberia/Users/User/Domain/UserPassword.java
+ com.proyectoweb.barberia.Users.User.Domain.UserPassword
+ com.proyectoweb.barberia.Users.User.Domain.UserPassword$1
 com/proyectoweb/barberia/Users/User/Domain/UserAlreadyExists.java
  com.proyectoweb.barberia.Users.User.Domain.UserAlreadyExists
 com/proyectoweb/barberia/Services/Service/Infrastructure/DeleteServiceDeleteController.java
  com.proyectoweb.barberia.Services.Service.Infrastructure.DeleteServiceDeleteController
-com/proyectoweb/barberia/Reservations/Reservation/Infrastructure/ReservationsGetController.java
- com.proyectoweb.barberia.Reservations.Reservation.Infrastructure.ReservationsGetController
-com/proyectoweb/barberia/Shared/Domain/CustomUUID.java
- com.proyectoweb.barberia.Shared.Domain.CustomUUID
 com/proyectoweb/barberia/Users/User/Infrastructure/EditUserPostController.java
  com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController
-com/proyectoweb/barberia/Users/User/Domain/UpperLowerError.java
- com.proyectoweb.barberia.Users.User.Domain.UpperLowerError
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$1
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$2
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$3
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$Request
+com/proyectoweb/barberia/Users/User/Domain/UserLastName.java
+ com.proyectoweb.barberia.Users.User.Domain.UserLastName
+com/proyectoweb/barberia/Users/User/Infrastructure/SignupUserPostController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.Request
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$1
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$2
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$3
+com/proyectoweb/barberia/Users/User/Domain/UserRepository.java
+ com.proyectoweb.barberia.Users.User.Domain.UserRepository
+com/proyectoweb/barberia/Users/User/Application/Create/UserCreator.java
+ com.proyectoweb.barberia.Users.User.Application.Create.UserCreator
 com/proyectoweb/barberia/Users/User/Domain/User.java
  com.proyectoweb.barberia.Users.User.Domain.User
  com.proyectoweb.barberia.Users.User.Domain.User$1
-com/proyectoweb/barberia/security/JWTAuthorizationFilter.java
- com.proyectoweb.barberia.security.JWTAuthorizationFilter
-com/proyectoweb/barberia/Users/User/Domain/UserName.java
- com.proyectoweb.barberia.Users.User.Domain.UserName
-com/proyectoweb/barberia/Shared/Application/Response.java
- com.proyectoweb.barberia.Shared.Application.Response
+com/proyectoweb/barberia/Users/User/Application/Update/UserModifier.java
+ com.proyectoweb.barberia.Users.User.Application.Update.UserModifier
+com/proyectoweb/barberia/Users/User/Domain/UserDomainFinder.java
+ com.proyectoweb.barberia.Users.User.Domain.UserDomainFinder
+com/proyectoweb/barberia/Users/User/Infrastructure/Hibernate/HibernateUserRepository.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository
+com/proyectoweb/barberia/Users/User/Application/Find/UserFinder.java
+ com.proyectoweb.barberia.Users.User.Application.Find.UserFinder
+com/proyectoweb/barberia/Users/User/Application/Find/UserFinderResponse.java
+ com.proyectoweb.barberia.Users.User.Application.Find.UserFinderResponse
+com/proyectoweb/barberia/security/WebSecurityConfig.java
+ com.proyectoweb.barberia.security.WebSecurityConfig

@@ -21,6 +21,8 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    public User(){}
+
     public void updateUser(UserFirstName userFirstName, UserLastName userLastName, UserName userName){
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;

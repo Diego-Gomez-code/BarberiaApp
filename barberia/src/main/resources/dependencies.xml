@@ -14,4 +14,12 @@
         <constructor-arg ref="BadWordService"/>
     </bean>
 
+    <bean id="userModifier" class="com.proyectoweb.barberia.Users.User.Application.Update.UserModifier">
+        <constructor-arg ref="HibernateUserRepository"/>
+        <constructor-arg ref="BadWordService"/>
+    </bean>
+
+    <bean id="userFinder" class="com.proyectoweb.barberia.Users.User.Application.Find.UserFinder">
+        <constructor-arg ref="HibernateUserRepository"/>
+    </bean>
 </beans>

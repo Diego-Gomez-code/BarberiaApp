@@ -9,6 +9,8 @@ public class UserName extends StringValueObject {
         this.value = value;
     }
 
+    public UserName(){}
+
     private void validate(String value) {
         this.lenghtRule(value);
         //TODO: Other Rules

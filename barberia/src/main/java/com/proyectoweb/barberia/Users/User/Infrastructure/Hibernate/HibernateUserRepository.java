@@ -38,12 +38,13 @@ public class HibernateUserRepository implements UserRepository {
 
     @Override
     public void update(String userId, User user) {
-        this.sessionFactory.getCurrentSession().update(user);
+       this.sessionFactory.getCurrentSession().update(user);
     }
 
     @Override
     public Optional<List<User>> all() {
-        Query query = sessionFactory.getCurrentSession().createQuery("");
+        String select = "";
+        Query query = sessionFactory.getCurrentSession().createQuery(select);
         return Optional.ofNullable(query.list());
     }
 }
