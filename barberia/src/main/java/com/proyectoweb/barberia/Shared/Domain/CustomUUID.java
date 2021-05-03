@@ -11,6 +11,11 @@ public class CustomUUID implements Serializable {
     public CustomUUID(String value){
         this.value = value;
     }
+
+    public CustomUUID() {
+
+    }
+
     private void validate(String value) {
         this.validateUUIDFormatRule(value);
     }
