@@ -17,7 +17,7 @@
         <constructor-arg ref="HibernateServiceRepository"/>
     </bean>
 
-
+    <bean id="SpringApplicationEventBus" class="com.proyectoweb.barberia.Shared.Infrastructure.Bus.Event.Spring.SpringApplicationEventBus"/>
     <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
     <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
     <bean id="userCreator" class="com.proyectoweb.barberia.Users.User.Application.Create.UserCreator">
