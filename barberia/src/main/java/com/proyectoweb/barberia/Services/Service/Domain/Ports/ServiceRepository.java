@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface ServiceRepository {
     void save(Service service);
-    String find(String serviceId);
+    Optional<Service> find(String serviceId);
     void update(Service service);
     Optional<List<Service>> findAll();
 }

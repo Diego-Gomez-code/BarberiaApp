@@ -37,10 +37,9 @@ public class HibernateServiceRepository implements ServiceRepository {
     }
 
     @Override
-    public String find(String serviceId) {
+    public Optional<Service> find(String serviceId) {
         ServiceId id = new ServiceId(serviceId);
-        //return Optional.ofNullable(sessionFactory.getCurrentSession().byId(aggregateClass).load(id));
-        return "Se encontro";
+        return Optional.ofNullable(sessionFactory.getCurrentSession().byId(aggregateClass).load(id));
     }
 
     @Override

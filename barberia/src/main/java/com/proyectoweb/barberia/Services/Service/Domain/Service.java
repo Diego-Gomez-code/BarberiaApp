@@ -15,6 +15,9 @@ public class Service {
     private ServiceDescription serviceDescription;
     private ServicePrice servicePrice;
 
+    public Service() {
+    }
+
     public Service(ServiceId serviceId, ServiceName serviceName, ServiceDescription serviceDescription, ServicePrice servicePrice) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
@@ -47,10 +50,10 @@ public class Service {
     public HashMap<String, Object> data()
     {
         HashMap<String, Object> data = new HashMap<String, Object>() {{
+            put("id", serviceId.value());
             put("name", serviceName.value());
             put("description", serviceDescription.value());
             put("price", servicePrice.value());
-            put("id", serviceId.value());
         }};
         return data;
     }
