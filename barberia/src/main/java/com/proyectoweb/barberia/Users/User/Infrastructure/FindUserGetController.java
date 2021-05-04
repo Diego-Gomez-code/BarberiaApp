@@ -3,7 +3,7 @@ package com.proyectoweb.barberia.Users.User.Infrastructure;
 import com.proyectoweb.barberia.Shared.Domain.UUIDNotValid;
 import com.proyectoweb.barberia.Users.User.Application.Find.UserFinder;
 import com.proyectoweb.barberia.Users.User.Application.Find.UserFinderResponse;
-import com.proyectoweb.barberia.Users.User.Domain.Exceptions.UserNotExist;
+import com.proyectoweb.barberia.Users.User.Domain.UserNotExist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

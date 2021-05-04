@@ -1,8 +1,5 @@
 package com.proyectoweb.barberia.Users.User.Domain;
 
-import com.proyectoweb.barberia.Users.User.Domain.Exceptions.UserNotExist;
-import com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository;
-
 import java.util.Optional;
 
 public class UserDomainFinder {

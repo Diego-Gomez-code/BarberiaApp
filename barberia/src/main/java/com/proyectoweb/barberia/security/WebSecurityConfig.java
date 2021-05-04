@@ -16,13 +16,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/users/all").permitAll()
-                .antMatchers(HttpMethod.GET, "/products/all").permitAll()
+                .antMatchers(HttpMethod.GET, "/products/").permitAll()
                 .antMatchers(HttpMethod.POST, "/users/signup").permitAll()
                 .antMatchers(HttpMethod.POST, "/users/edit").permitAll()
                 .antMatchers(HttpMethod.GET, "/users/find/{id}").permitAll()
-                .antMatchers(HttpMethod.GET, "/products/find/{id}").permitAll()
-                .antMatchers(HttpMethod.POST, "/products/create").permitAll()
-                .antMatchers(HttpMethod.POST, "/products/update").permitAll()
+                .antMatchers(HttpMethod.POST, "/service/create").permitAll()
+                .antMatchers(HttpMethod.GET, "/service/find/{id}").permitAll()
+                .antMatchers(HttpMethod.GET, "/service/findAll").permitAll()
                 .anyRequest().authenticated();
     }
 }

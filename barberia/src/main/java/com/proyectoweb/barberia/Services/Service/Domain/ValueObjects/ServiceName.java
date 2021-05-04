@@ -1,7 +1,7 @@
 package com.proyectoweb.barberia.Services.Service.Domain.ValueObjects;
 
 import com.proyectoweb.barberia.Shared.Domain.StringValueObject;
-import com.proyectoweb.barberia.Users.User.Domain.Exceptions.LengthNotValid;
+import com.proyectoweb.barberia.Users.User.Domain.LengthNotValid;
 
 public class ServiceName extends StringValueObject {
 
@@ -9,6 +9,11 @@ public class ServiceName extends StringValueObject {
         this.validate(value);
         this.value = value;
     }
+
+    public ServiceName() {
+
+    }
+
     private void validate(String value) {
         this.lenghtRule(value);
         //TODO: Other Rules Service name

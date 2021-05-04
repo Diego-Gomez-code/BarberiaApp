@@ -8,23 +8,23 @@
             <key-property name="value" column="idUser" access="field" length="11"/>
         </composite-id>
 
-        <component name="userFirstName" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserFirstName" access="field" >
+        <component name="userFirstName" class="com.proyectoweb.barberia.Users.User.Domain.UserFirstName" access="field" >
             <property name="value" column="firstname" access="field" type="string"/>
         </component>
 
-        <component name="userLastName" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserLastName" access="field" >
+        <component name="userLastName" class="com.proyectoweb.barberia.Users.User.Domain.UserLastName" access="field" >
             <property name="value" column="lastname" access="field" type="string" />
         </component>
 
-        <component name="userName" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserName" access="field" >
+        <component name="userName" class="com.proyectoweb.barberia.Users.User.Domain.UserName" access="field" >
             <property name="value" column="username" access="field" type="string" />
         </component>
 
-        <component name="userEmail" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserEmail" access="field">
+        <component name="userEmail" class="com.proyectoweb.barberia.Users.User.Domain.UserEmail" access="field">
             <property name="value" column="email" access="field" type="string" />
         </component>
 
-        <component name="userPassword" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserPassword" access="field" >
+        <component name="userPassword" class="com.proyectoweb.barberia.Users.User.Domain.UserPassword" access="field" >
             <property name="value" column="password" access="field" type="string" />
         </component>
     </class>
