@@ -1,5 +1,7 @@
 package com.proyectoweb.barberia.Users.User.Domain;
 
+import com.proyectoweb.barberia.Users.User.Domain.Exceptions.BadWordsError;
+
 public class UserValidateWords {
 
     private ValidateWordService service;

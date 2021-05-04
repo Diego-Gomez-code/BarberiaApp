@@ -1,8 +1,8 @@
 package com.proyectoweb.barberia.Users.User.Application.All;
 
 import com.proyectoweb.barberia.Users.User.Domain.User;
-import com.proyectoweb.barberia.Users.User.Domain.UserRepository;
-import com.proyectoweb.barberia.Users.User.Domain.UsersEmpty;
+import com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository;
+import com.proyectoweb.barberia.Users.User.Domain.Exceptions.UsersEmpty;
 
 import java.util.List;
 import java.util.Optional;

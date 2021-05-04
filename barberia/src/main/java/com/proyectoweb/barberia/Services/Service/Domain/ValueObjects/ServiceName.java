@@ -1,7 +1,7 @@
 package com.proyectoweb.barberia.Services.Service.Domain.ValueObjects;
 
 import com.proyectoweb.barberia.Shared.Domain.StringValueObject;
-import com.proyectoweb.barberia.Users.User.Domain.LengthNotValid;
+import com.proyectoweb.barberia.Users.User.Domain.Exceptions.LengthNotValid;
 
 public class ServiceName extends StringValueObject {
 

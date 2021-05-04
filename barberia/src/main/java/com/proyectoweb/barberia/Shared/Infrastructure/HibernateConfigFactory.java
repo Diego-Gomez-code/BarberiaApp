@@ -27,8 +27,9 @@ public class HibernateConfigFactory {
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         FileSystemResource resource1 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Users/User/Infrastructure/Hibernate/User.hbm.xml");
+        FileSystemResource resource2 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Products/Product/Infrastructure/Hibernate/Product.hbm.xml");
 
-        sessionFactory.setMappingLocations(resource1);
+        sessionFactory.setMappingLocations(resource1, resource2);
         return sessionFactory;
     }
 

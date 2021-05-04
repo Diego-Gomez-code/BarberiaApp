@@ -1,6 +1,11 @@
 package com.proyectoweb.barberia.Users.User.Application.Update;
 
 import com.proyectoweb.barberia.Users.User.Domain.*;
+import com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository;
+import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserEmail;
+import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserFirstName;
+import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserLastName;
+import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserName;
 
 import java.util.Optional;
 

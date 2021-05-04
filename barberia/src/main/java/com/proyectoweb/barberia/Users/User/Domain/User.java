@@ -1,6 +1,7 @@
 package com.proyectoweb.barberia.Users.User.Domain;
 
 import com.proyectoweb.barberia.Shared.Domain.Users.UserId;
+import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.*;
 
 import java.util.HashMap;
 import java.util.Objects;

@@ -2,7 +2,7 @@ package com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate;
 
 import com.proyectoweb.barberia.Shared.Domain.Users.UserId;
 import com.proyectoweb.barberia.Users.User.Domain.User;
-import com.proyectoweb.barberia.Users.User.Domain.UserRepository;
+import com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 

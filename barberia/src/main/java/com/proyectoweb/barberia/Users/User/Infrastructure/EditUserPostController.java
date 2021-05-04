@@ -2,7 +2,7 @@ package com.proyectoweb.barberia.Users.User.Infrastructure;
 
 import com.proyectoweb.barberia.Shared.Domain.UUIDNotValid;
 import com.proyectoweb.barberia.Users.User.Application.Update.UserModifier;
-import com.proyectoweb.barberia.Users.User.Domain.*;
+import com.proyectoweb.barberia.Users.User.Domain.Exceptions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
