@@ -10,6 +10,10 @@ public class ServicePrice extends DoubleValueObject {
         this.value = value;
     }
 
+    public ServicePrice() {
+
+    }
+
     public void validate(Double value) {
         this.pricevalue(value);
     }

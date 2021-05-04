@@ -3,7 +3,7 @@ package com.proyectoweb.barberia.Users.User.Application.Find;
 import com.proyectoweb.barberia.Shared.Domain.Users.UserId;
 import com.proyectoweb.barberia.Users.User.Domain.User;
 import com.proyectoweb.barberia.Users.User.Domain.UserDomainFinder;
-import com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository;
+import com.proyectoweb.barberia.Users.User.Domain.UserRepository;
 
 import java.util.Optional;
 

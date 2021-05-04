@@ -3,46 +3,33 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="HibernateServiceRepository" class="com.proyectoweb.barberia.Services.Service.Infrastructure.Hibernates.HibernateServiceRepository" />
+    <bean id="ServiceCreator" class="com.proyectoweb.barberia.Services.Service.Application.ServiceCreator">
+        <constructor-arg ref="HibernateServiceRepository"/>
+    </bean>
+    <bean id="ServiceFindAll" class="com.proyectoweb.barberia.Services.Service.Application.All.ServiceFindAll">
+        <constructor-arg ref="HibernateServiceRepository"/>
+    </bean>
 
+
+    <bean id="ServiceFindById" class="com.proyectoweb.barberia.Services.Service.Application.ServiceFindById">
+        <constructor-arg ref="HibernateServiceRepository"/>
+    </bean>
 
     <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
-
     <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
-
-    <bean id="HibernateProductRepository" class="com.proyectoweb.barberia.Products.Product.Infrastructure.Hibernate.HibernateProductRepository" />
-
     <bean id="userCreator" class="com.proyectoweb.barberia.Users.User.Application.Create.UserCreator">
         <constructor-arg ref="HibernateUserRepository"/>
         <constructor-arg ref="BadWordService"/>
     </bean>
-
     <bean id="userModifier" class="com.proyectoweb.barberia.Users.User.Application.Update.UserModifier">
         <constructor-arg ref="HibernateUserRepository"/>
         <constructor-arg ref="BadWordService"/>
     </bean>
-
     <bean id="userFinder" class="com.proyectoweb.barberia.Users.User.Application.Find.UserFinder">
         <constructor-arg ref="HibernateUserRepository"/>
     </bean>
-
     <bean id="userAll" class="com.proyectoweb.barberia.Users.User.Application.All.UserAll">
         <constructor-arg ref="HibernateUserRepository"/>
-    </bean>
-
-    <bean id="productAll" class="com.proyectoweb.barberia.Products.Product.Application.All.ProductAll">
-        <constructor-arg ref="HibernateProductRepository" />
-    </bean>
-
-    <bean id="productFinder" class="com.proyectoweb.barberia.Products.Product.Application.Find.ProductFinder">
-        <constructor-arg ref="HibernateProductRepository" />
-    </bean>
-
-    <bean id="productCreator" class="com.proyectoweb.barberia.Products.Product.Application.Create.ProductCreator">
-        <constructor-arg ref="HibernateProductRepository" />
-    </bean>
-
-    <bean id="productModifier" class="com.proyectoweb.barberia.Products.Product.Application.Update.ProductModifier">
-        <constructor-arg ref="HibernateProductRepository" />
-        <constructor-arg ref="HibernateUserRepository" />
     </bean>
 </beans>
