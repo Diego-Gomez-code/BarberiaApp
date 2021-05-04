@@ -17,34 +17,5 @@ import static org.mockito.Mockito.*;
 
 @SpringBootTest
 public class CreateServiceTest {
-    @Test
-    void test_create_solo(){
-        System.out.println("Entro Test Create");
-        Service actual = new Service(new ServiceId("de3d0110-1e04-47a0-af31-f099a0dfd5d9"),new ServiceName("uñassuperwao"),new ServiceDescription("uñas"), new ServicePrice(5000.d));
-        InMemoryRepository repository = new InMemoryRepository();
-        repository.save(actual);
-        List<Service> servicios = repository.findAll();
-        for (Service valor: servicios) {
-            System.out.println(valor.info());
-        }
-    }
 
-    @Test
-    void print_test_find_id() {
-        System.out.println("Entro Test Find By ID");
-        InMemoryRepository repository = new InMemoryRepository();
-        Service actual = new Service(new ServiceId("de3d0110-1e04-47a0-af31-f099a0dfd5d9"), new ServiceName("uñassuperwao"), new ServiceDescription("uñas"), new ServicePrice(5000.d));
-        repository.save(actual);
-        System.out.println(repository.find("de3d0110-1e04-47a0-af31-f099a0dfd5d9"));
-    }
-
-    @Test
-    void print_test_find_All(){
-        InMemoryRepository repository = new InMemoryRepository();
-        List<Service> servicios = repository.findAll();
-        for (Service valor: servicios) {
-            System.out.println(valor.info());
-        }
-        System.out.println("los servicios" +servicios);
-    }
 }

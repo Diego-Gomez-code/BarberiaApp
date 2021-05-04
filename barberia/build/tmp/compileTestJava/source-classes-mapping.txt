@@ -1,4 +1,0 @@
-com/proyectoweb/barberia/ServiceTest/CreateServiceTest.java
- com.proyectoweb.barberia.ServiceTest.CreateServiceTest
-com/proyectoweb/barberia/BarberiaApplicationTests.java
- com.proyectoweb.barberia.BarberiaApplicationTests
