@@ -13,6 +13,10 @@
     <bean id="ServiceFindById" class="com.proyectoweb.barberia.Services.Service.Application.Find.ServiceFindById">
         <constructor-arg ref="HibernateServiceRepository"/>
     </bean>
+    <bean id="ServiceUpdate" class="com.proyectoweb.barberia.Services.Service.Application.ServiceUpdate">
+        <constructor-arg ref="HibernateServiceRepository"/>
+    </bean>
+
 
     <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
     <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
