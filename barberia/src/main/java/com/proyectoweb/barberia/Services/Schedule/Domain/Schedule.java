@@ -21,4 +21,5 @@ public class Schedule extends AggregateRoot {
         this.scheduleDateStart = scheduleDateStart;
         this.userId = userId;
     }
+
 }

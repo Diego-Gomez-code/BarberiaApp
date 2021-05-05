@@ -9,4 +9,8 @@ public class ScheduleCreator {
     public ScheduleCreator(ScheduleRepository repository) {
         this.repository = repository;
     }
+
+    public void execute(){
+
+    }
 }
