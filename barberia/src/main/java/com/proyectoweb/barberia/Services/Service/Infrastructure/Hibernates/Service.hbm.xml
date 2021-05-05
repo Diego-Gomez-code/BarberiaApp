@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.proyectoweb.barberia.Services.Service.Domain.Service" table="Servicios">
+    <class name="com.proyectoweb.barberia.Services.Service.Domain.Service" table="Services">
         <composite-id name="serviceId" class="com.proyectoweb.barberia.Shared.Domain.Services.ServiceId" access="field" >
             <key-property name="value" column="id" access="field" type="string"/>
         </composite-id>

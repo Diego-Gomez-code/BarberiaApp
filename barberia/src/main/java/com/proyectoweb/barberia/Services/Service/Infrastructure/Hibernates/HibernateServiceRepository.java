@@ -44,7 +44,9 @@ public class HibernateServiceRepository implements ServiceRepository {
 
     @Override
     public void update(Service service) {
-
+        this.sessionFactory.getCurrentSession().update(service);
+        sessionFactory.getCurrentSession().flush();
+        sessionFactory.getCurrentSession().clear();
     }
 
     @Override

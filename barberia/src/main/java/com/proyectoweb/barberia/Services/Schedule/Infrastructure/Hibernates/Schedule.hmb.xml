@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.proyectoweb.barberia.Services.Schedule.Domain.Schedule" table="Schedule">
+        <composite-id name="scheduleId" class="com.proyectoweb.barberia.Shared.Domain.Schedule.ScheduleId" access="field" >
+            <key-property name="value" column="schedule_id" access="field" type="string"/>
+        </composite-id>
+
+        <component name="serviceId" class="com.proyectoweb.barberia.Shared.Domain.Services.ServiceId" access="field" >
+            <property name="value" column="service_id" access="field" type="string"/>
+        </component>
+
+        <component name="scheduleDateStart" class="com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleDate" access="field" >
+            <property name="value" column="datetome_start" access="field" type="date" />
+        </component>
+
+        <component name="scheduleOption" class="com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleOption" access="field" >
+            <property name="value" column="type" access="field" type="char" />
+        </component>
+    </class>
+</hibernate-mapping>

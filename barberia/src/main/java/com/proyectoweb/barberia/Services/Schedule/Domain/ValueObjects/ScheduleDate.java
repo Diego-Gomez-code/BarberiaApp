@@ -1,18 +1,18 @@
 package com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.GregorianCalendar;
 
 public class ScheduleDate {
 
     // ValueObject para el Date?
-    private GregorianCalendar value;
+    private Date value;
 
-    public ScheduleDate(GregorianCalendar value) {
+    public ScheduleDate(Date value) {
         this.value = value;
     }
 
-    public GregorianCalendar value() {
+    public  Date value() {
         return value;
     }
 
