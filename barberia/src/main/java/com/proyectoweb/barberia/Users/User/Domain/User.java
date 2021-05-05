@@ -12,24 +12,27 @@ public class User {
     private UserLastName userLastName;
     private UserName userName;
     private UserEmail userEmail;
+    private UserRol userRol;
     private UserPassword userPassword;
 
-    public User(UserId userId, UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserEmail userEmail, UserPassword userPassword) {
+    public User(UserId userId, UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserEmail userEmail, UserRol userRol, UserPassword userPassword) {
         this.userId = userId;
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userName = userName;
         this.userEmail = userEmail;
+        this.userRol = userRol;
         this.userPassword = userPassword;
     }
 
     public User(){}
 
-    public void updateUser(UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserEmail userEmail){
+    public void updateUser(UserFirstName userFirstName, UserLastName userLastName, UserName userName, UserEmail userEmail, UserRol userRol){
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userName = userName;
         this.userEmail = userEmail;
+        this.userRol = userRol;
     }
 
     public boolean equalsById(String otherId) {
@@ -43,6 +46,7 @@ public class User {
             put("lastname", userLastName.value());
             put("username", userName.value());
             put("email", userEmail.value());
+            put("rol", userRol.value());
         }};
         return data;
     }
@@ -57,6 +61,11 @@ public class User {
                 Objects.equals(userLastName, user.userLastName) &&
                 Objects.equals(userName, user.userName) &&
                 Objects.equals(userPassword, user.userPassword) &&
-                Objects.equals(userEmail, user.userEmail);
+                Objects.equals(userEmail, user.userEmail) &&
+                Objects.equals(userRol, user.userRol);
+    }
+
+    public UserRol getUserRol(){
+        return this.userRol;
     }
 }

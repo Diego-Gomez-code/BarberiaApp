@@ -34,6 +34,7 @@ com/proyectoweb/barberia/Shared/Domain/BooleanValueObject.java
  com.proyectoweb.barberia.Shared.Domain.BooleanValueObject
 com/proyectoweb/barberia/Services/Service/Infrastructure/CreateServicePostController.java
  com.proyectoweb.barberia.Services.Service.Infrastructure.CreateServicePostController
+<<<<<<< HEAD
  com.proyectoweb.barberia.Services.Service.Infrastructure.CreateServicePostController$Request
 com/proyectoweb/barberia/Shared/Infrastructure/HibernateConfigFactory.java
  com.proyectoweb.barberia.Shared.Infrastructure.HibernateConfigFactory
@@ -51,12 +52,51 @@ com/proyectoweb/barberia/Users/User/Application/All/UserAll.java
  com.proyectoweb.barberia.Users.User.Application.All.UserAll
 com/proyectoweb/barberia/Users/User/Domain/UsersEmpty.java
  com.proyectoweb.barberia.Users.User.Domain.UsersEmpty
+=======
+com/proyectoweb/barberia/Reservations/Reservation/Infrastructure/UserReservationsGetController.java
+ com.proyectoweb.barberia.Reservations.Reservation.Infrastructure.UserReservationsGetController
+com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserName.java
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserName
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/Exceptions/CarritoCompraNotExist.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.Exceptions.CarritoCompraNotExist
+com/proyectoweb/barberia/Shared/Domain/Services/ServiceId.java
+ com.proyectoweb.barberia.Shared.Domain.Services.ServiceId
+com/proyectoweb/barberia/Products/Product/Infrastructure/Hibernate/HibernateProductRepository.java
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Hibernate.HibernateProductRepository
+com/proyectoweb/barberia/Shared/Domain/DoubleNotValid.java
+ com.proyectoweb.barberia.Shared.Domain.DoubleNotValid
+com/proyectoweb/barberia/Products/Product/Infrastructure/Controllers/DetailProductGetController.java
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.DetailProductGetController
+com/proyectoweb/barberia/Products/Product/Application/All/ProductAllResponse.java
+ com.proyectoweb.barberia.Products.Product.Application.All.ProductAllResponse
+com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserEmail.java
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserEmail
+com/proyectoweb/barberia/Users/User/Domain/Exceptions/UserAlreadyExists.java
+ com.proyectoweb.barberia.Users.User.Domain.Exceptions.UserAlreadyExists
+com/proyectoweb/barberia/Users/User/Domain/Exceptions/UpperLowerError.java
+ com.proyectoweb.barberia.Users.User.Domain.Exceptions.UpperLowerError
+com/proyectoweb/barberia/Services/Service/Domain/ValueObjects/ServiceName.java
+ com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceName
+com/proyectoweb/barberia/Products/Product/Infrastructure/Controllers/DeleteProductDeleteController.java
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.DeleteProductDeleteController
+com/proyectoweb/barberia/Products/Product/Domain/Exceptions/PriceError.java
+ com.proyectoweb.barberia.Products.Product.Domain.Exceptions.PriceError
+com/proyectoweb/barberia/Users/User/Infrastructure/SignupUserPostController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$1
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$2
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$3
+ com.proyectoweb.barberia.Users.User.Infrastructure.SignupUserPostController$Request
+com/proyectoweb/barberia/Products/Product/Domain/ValueObjects/ProductPrice.java
+ com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductPrice
+>>>>>>> Rama1
 com/proyectoweb/barberia/Shared/Domain/Users/UserId.java
  com.proyectoweb.barberia.Shared.Domain.Users.UserId
 com/proyectoweb/barberia/Services/Schedule/Domain/ValueObjects/ScheduleDate.java
  com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleDate
 com/proyectoweb/barberia/Users/User/Domain/UserValidateWords.java
  com.proyectoweb.barberia.Users.User.Domain.UserValidateWords
+<<<<<<< HEAD
 com/proyectoweb/barberia/Users/User/Domain/UserDomainFinder.java
  com.proyectoweb.barberia.Users.User.Domain.UserDomainFinder
 com/proyectoweb/barberia/Users/User/Domain/ValidateWordService.java
@@ -84,6 +124,26 @@ com/proyectoweb/barberia/Users/User/Domain/User.java
  com.proyectoweb.barberia.Users.User.Domain.User$1
 com/proyectoweb/barberia/security/JWTAuthorizationFilter.java
  com.proyectoweb.barberia.security.JWTAuthorizationFilter
+=======
+com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserFirstName.java
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserFirstName
+com/proyectoweb/barberia/Products/Product/Application/All/ProductAll.java
+ com.proyectoweb.barberia.Products.Product.Application.All.ProductAll
+com/proyectoweb/barberia/Products/Product/Application/Find/ProductFinderResponse.java
+ com.proyectoweb.barberia.Products.Product.Application.Find.ProductFinderResponse
+com/proyectoweb/barberia/Users/User/Domain/Exceptions/EmailFormatError.java
+ com.proyectoweb.barberia.Users.User.Domain.Exceptions.EmailFormatError
+com/proyectoweb/barberia/Products/Product/Domain/ValueObjects/ProductDescription.java
+ com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductDescription
+com/proyectoweb/barberia/Shared/Domain/CustomUUID.java
+ com.proyectoweb.barberia.Shared.Domain.CustomUUID
+com/proyectoweb/barberia/Products/Product/Domain/ValueObjects/ProductName.java
+ com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductName
+com/proyectoweb/barberia/Users/User/Domain/Exceptions/LengthNotValid.java
+ com.proyectoweb.barberia.Users.User.Domain.Exceptions.LengthNotValid
+com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserLastName.java
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserLastName
+>>>>>>> Rama1
 com/proyectoweb/barberia/Services/Service/Domain/Exceptions/DescriptionNotValid.java
  com.proyectoweb.barberia.Services.Service.Domain.Exceptions.DescriptionNotValid
 com/proyectoweb/barberia/Shared/Domain/Services/ScheduleUpdateDomainEvent.java
@@ -109,6 +169,7 @@ com/proyectoweb/barberia/Users/User/Infrastructure/FindUserGetController.java
  com.proyectoweb.barberia.Users.User.Infrastructure.FindUserGetController
  com.proyectoweb.barberia.Users.User.Infrastructure.FindUserGetController$1
  com.proyectoweb.barberia.Users.User.Infrastructure.FindUserGetController$2
+<<<<<<< HEAD
 com/proyectoweb/barberia/Products/Product/Infrastructure/CreateProductPostController.java
  com.proyectoweb.barberia.Products.Product.Infrastructure.CreateProductPostController
 com/proyectoweb/barberia/Services/Service/Application/All/ServiceFindAllResponse.java
@@ -137,6 +198,30 @@ com/proyectoweb/barberia/Users/User/Application/Find/UserFinderResponse.java
  com.proyectoweb.barberia.Users.User.Application.Find.UserFinderResponse
 com/proyectoweb/barberia/Users/User/Domain/BadWordsError.java
  com.proyectoweb.barberia.Users.User.Domain.BadWordsError
+=======
+com/proyectoweb/barberia/Products/Product/Domain/Ports/ProductRepository.java
+ com.proyectoweb.barberia.Products.Product.Domain.Ports.ProductRepository
+com/proyectoweb/barberia/Products/Product/Infrastructure/Controllers/ProductsGetController.java
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.ProductsGetController
+com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserPassword.java
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserPassword
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserPassword$1
+com/proyectoweb/barberia/Products/Product/Infrastructure/Controllers/CreateProductPostController.java
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.CreateProductPostController
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.CreateProductPostController$Request
+com/proyectoweb/barberia/Shared/Domain/Products/ProductId.java
+ com.proyectoweb.barberia.Shared.Domain.Products.ProductId
+com/proyectoweb/barberia/Products/Product/Application/Create/ProductCreator.java
+ com.proyectoweb.barberia.Products.Product.Application.Create.ProductCreator
+com/proyectoweb/barberia/Products/Product/Domain/Exceptions/AmountError.java
+ com.proyectoweb.barberia.Products.Product.Domain.Exceptions.AmountError
+com/proyectoweb/barberia/Products/Product/Domain/ValueObjects/ProductAmount.java
+ com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductAmount
+com/proyectoweb/barberia/Products/Product/Application/Find/ProductFinder.java
+ com.proyectoweb.barberia.Products.Product.Application.Find.ProductFinder
+com/proyectoweb/barberia/Products/Product/Application/Update/ProductModifier.java
+ com.proyectoweb.barberia.Products.Product.Application.Update.ProductModifier
+>>>>>>> Rama1
 com/proyectoweb/barberia/Users/User/Infrastructure/AllUsersGetController.java
  com.proyectoweb.barberia.Users.User.Infrastructure.AllUsersGetController
 com/proyectoweb/barberia/Services/Service/Domain/Ports/ServiceRepository.java
@@ -155,6 +240,7 @@ com/proyectoweb/barberia/security/WebSecurityConfig.java
  com.proyectoweb.barberia.security.WebSecurityConfig
 com/proyectoweb/barberia/Services/Service/Domain/ValueObjects/ServicePrice.java
  com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServicePrice
+<<<<<<< HEAD
 com/proyectoweb/barberia/Products/Product/Infrastructure/DeleteProductDeleteController.java
  com.proyectoweb.barberia.Products.Product.Infrastructure.DeleteProductDeleteController
 com/proyectoweb/barberia/Services/Schedule/Application/ScheduleCreator.java
@@ -179,3 +265,88 @@ com/proyectoweb/barberia/Services/Schedule/Domain/Ports/ScheduleRepository.java
  com.proyectoweb.barberia.Services.Schedule.Domain.Ports.ScheduleRepository
 com/proyectoweb/barberia/Shared/Application/Response.java
  com.proyectoweb.barberia.Shared.Application.Response
+=======
+com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserRol.java
+ com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserRol
+com/proyectoweb/barberia/Users/User/Domain/Exceptions/RolError.java
+ com.proyectoweb.barberia.Users.User.Domain.Exceptions.RolError
+com/proyectoweb/barberia/Users/User/Infrastructure/EditUserPostController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$1
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$2
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$3
+ com.proyectoweb.barberia.Users.User.Infrastructure.EditUserPostController$Request
+com/proyectoweb/barberia/Users/User/Application/Find/UserFinder.java
+ com.proyectoweb.barberia.Users.User.Application.Find.UserFinder
+com/proyectoweb/barberia/Users/User/Application/Find/UserFinderResponse.java
+ com.proyectoweb.barberia.Users.User.Application.Find.UserFinderResponse
+com/proyectoweb/barberia/Users/User/Application/Create/UserCreator.java
+ com.proyectoweb.barberia.Users.User.Application.Create.UserCreator
+com/proyectoweb/barberia/Users/User/Application/All/UserAllResponse.java
+ com.proyectoweb.barberia.Users.User.Application.All.UserAllResponse
+com/proyectoweb/barberia/Users/User/Domain/User.java
+ com.proyectoweb.barberia.Users.User.Domain.User
+ com.proyectoweb.barberia.Users.User.Domain.User$1
+com/proyectoweb/barberia/Users/User/Application/All/UserAll.java
+ com.proyectoweb.barberia.Users.User.Application.All.UserAll
+com/proyectoweb/barberia/Users/User/Domain/Ports/UserRepository.java
+ com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository
+com/proyectoweb/barberia/Users/User/Infrastructure/Hibernate/HibernateUserRepository.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository
+com/proyectoweb/barberia/Users/User/Application/Update/UserModifier.java
+ com.proyectoweb.barberia.Users.User.Application.Update.UserModifier
+com/proyectoweb/barberia/Users/User/Domain/UserDomainFinder.java
+ com.proyectoweb.barberia.Users.User.Domain.UserDomainFinder
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/Exceptions/NoProductsError.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.Exceptions.NoProductsError
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/Exceptions/NegativeTotalError.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.Exceptions.NegativeTotalError
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/ValueObjects/CompraTotal.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.ValueObjects.CompraTotal
+com/proyectoweb/barberia/Products/Product/Infrastructure/Controllers/ProductUpdatePostController.java
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.ProductUpdatePostController
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.ProductUpdatePostController$1
+ com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.ProductUpdatePostController$Request
+com/proyectoweb/barberia/Shared/Infrastructure/HibernateConfigFactory.java
+ com.proyectoweb.barberia.Shared.Infrastructure.HibernateConfigFactory
+com/proyectoweb/barberia/Shared/Domain/Products/CarritoCompraId.java
+ com.proyectoweb.barberia.Shared.Domain.Products.CarritoCompraId
+com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Controllers/FindCarritoCompraGetController.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.FindCarritoCompraGetController
+com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Controllers/CreateCarritoCompraPostController.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.CreateCarritoCompraPostController
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.CreateCarritoCompraPostController$Request
+com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Controllers/RemoveProductCarritoPostController.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.RemoveProductCarritoPostController
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.RemoveProductCarritoPostController$1
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.RemoveProductCarritoPostController$2
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.RemoveProductCarritoPostController$Request
+com/proyectoweb/barberia/Products/CarritoCompra/Application/Find/CarritoCompraResponse.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Application.Find.CarritoCompraResponse
+com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Controllers/AddProductCarritoPostController.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.AddProductCarritoPostController
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.AddProductCarritoPostController$1
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controllers.AddProductCarritoPostController$Request
+com/proyectoweb/barberia/security/WebSecurityConfig.java
+ com.proyectoweb.barberia.security.WebSecurityConfig
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/ValueObjects/ProductDetails.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.ValueObjects.ProductDetails
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.ValueObjects.ProductDetails$1
+com/proyectoweb/barberia/Products/CarritoCompra/Application/Find/CarritoCompraFinder.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Application.Find.CarritoCompraFinder
+com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Hibernate/HibernateCarritoCompraRepository.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Hibernate.HibernateCarritoCompraRepository
+com/proyectoweb/barberia/Products/CarritoCompra/Application/AddProduct/CarritoAddProduct.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Application.AddProduct.CarritoAddProduct
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/Ports/CarritoCompraRepository.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.Ports.CarritoCompraRepository
+com/proyectoweb/barberia/Products/CarritoCompra/Application/Create/CreateCarritoCompra.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Application.Create.CreateCarritoCompra
+com/proyectoweb/barberia/Products/CarritoCompra/Domain/CarritoCompra.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.CarritoCompra
+ com.proyectoweb.barberia.Products.CarritoCompra.Domain.CarritoCompra$1
+com/proyectoweb/barberia/Products/CarritoCompra/Application/RemoveProduct/CarritoRemoveProduct.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Application.RemoveProduct.CarritoRemoveProduct
+com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Hibernate/ProductsCustomType.java
+ com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Hibernate.ProductsCustomType
+>>>>>>> Rama1

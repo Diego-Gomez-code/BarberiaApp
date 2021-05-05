@@ -21,7 +21,7 @@ public final class EditUserPostController {
     @PostMapping(value = "/edit", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity execute(@RequestBody Request request){
         System.out.println("username: " + request.getUserName());
-        modifier.execute(request.getUserId(), request.getFirstName(), request.getLastName(), request.getUserName(), request.getEmail());
+        modifier.execute(request.getUserId(), request.getFirstName(), request.getLastName(), request.getUserName(), request.getEmail(), request.getRol());
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(null);
     }
 
@@ -57,6 +57,7 @@ public final class EditUserPostController {
         private String lastName;
         private String userName;
         private String email;
+        private String rol;
 
         public Request(){}
 
@@ -98,6 +99,14 @@ public final class EditUserPostController {
 
         public void setEmail(String email) {
             this.email = email;
+        }
+
+        public String getRol() {
+            return rol;
+        }
+
+        public void setRol(String rol) {
+            this.rol = rol;
         }
     }
 }

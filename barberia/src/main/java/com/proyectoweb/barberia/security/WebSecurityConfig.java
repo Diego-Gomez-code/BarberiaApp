@@ -20,9 +20,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/users/signup").permitAll()
                 .antMatchers(HttpMethod.POST, "/users/edit").permitAll()
                 .antMatchers(HttpMethod.GET, "/users/find/{id}").permitAll()
+<<<<<<< HEAD
                 .antMatchers(HttpMethod.POST, "/service/create").permitAll()
                 .antMatchers(HttpMethod.GET, "/service/find/{id}").permitAll()
                 .antMatchers(HttpMethod.GET, "/service/findAll").permitAll()
+=======
+                .antMatchers(HttpMethod.GET, "/products/find/{id}").permitAll()
+                .antMatchers(HttpMethod.POST, "/products/create").permitAll()
+                .antMatchers(HttpMethod.POST, "/products/update").permitAll()
+                .antMatchers(HttpMethod.POST, "/carritocompra/create").permitAll()
+                .antMatchers(HttpMethod.GET, "/carritocompra/find/{id}").permitAll()
+                .antMatchers(HttpMethod.POST, "/carritocompra/addproduct").permitAll()
+                .antMatchers(HttpMethod.POST, "/carritocompra/removeproduct").permitAll()
+>>>>>>> Rama1
                 .anyRequest().authenticated();
     }
 }

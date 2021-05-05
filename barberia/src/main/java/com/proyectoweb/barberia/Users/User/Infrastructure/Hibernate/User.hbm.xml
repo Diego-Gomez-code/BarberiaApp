@@ -24,7 +24,15 @@
             <property name="value" column="email" access="field" type="string" />
         </component>
 
+<<<<<<< HEAD
         <component name="userPassword" class="com.proyectoweb.barberia.Users.User.Domain.UserPassword" access="field" >
+=======
+        <component name="userRol" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserRol" access="field">
+            <property name="value" column="rol" access="field" type="string" />
+        </component>
+
+        <component name="userPassword" class="com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserPassword" access="field" >
+>>>>>>> Rama1
             <property name="value" column="password" access="field" type="string" />
         </component>
     </class>

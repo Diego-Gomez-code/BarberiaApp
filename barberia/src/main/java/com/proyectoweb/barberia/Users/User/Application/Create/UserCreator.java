@@ -16,10 +16,10 @@ public class UserCreator {
         this.finder = new UserDomainFinder(repository);
     }
 
-    public void execute(String userId, String userFirstName, String userLastName, String userName, String userEmail, String userPassword){
+    public void execute(String userId, String userFirstName, String userLastName, String userName, String userEmail, String userRol, String userPassword){
         this.validate(userId);
         validator.execute(new UserName(userName).value());
-        User user = new User(new UserId(userId), new UserFirstName(userFirstName), new UserLastName(userLastName), new UserName(userName), new UserEmail(userEmail), new UserPassword(userPassword));
+        User user = new User(new UserId(userId), new UserFirstName(userFirstName), new UserLastName(userLastName), new UserName(userName), new UserEmail(userEmail), new UserRol(userRol), new UserPassword(userPassword));
         repository.save(user);
     }
     private void validate(String userId){

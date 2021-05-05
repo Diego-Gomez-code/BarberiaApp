@@ -1046,6 +1046,12 @@
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
+    <table id="333" parent="3" name="Product"/>
+    <table id="334" parent="3" name="Services"/>
+    <table id="335" parent="3" name="Servicios"/>
+    <table id="336" parent="3" name="Users"/>
+    <table id="337" parent="3" name="carritocompra"/>
+    <column id="338" parent="333" name="idProduct">
     <view id="333" parent="2" name="ALL_PLUGINS">
       <System>1</System>
     </view>
@@ -2960,6 +2966,7 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="339" parent="333" name="name">
     <column id="793" parent="353" name="compress_ops_ok">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
@@ -2990,6 +2997,7 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="340" parent="333" name="price">
     <column id="799" parent="354" name="pages_used">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
@@ -3332,6 +3340,7 @@
       <DataType>bigint(21)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="341" parent="333" name="amount">
     <column id="869" parent="367" name="MAX_COUNT_RESET">
       <Position>8</Position>
       <DataType>bigint(21)|0s</DataType>
@@ -3415,11 +3424,18 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="342" parent="333" name="description">
     <column id="887" parent="369" name="PRTYPE">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <key id="343" parent="333" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idProduct</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="344" parent="334" name="idService">
     <column id="888" parent="369" name="LEN">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
@@ -5594,36 +5610,43 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
+    <column id="345" parent="334" name="name">
     <column id="1354" parent="412" name="name">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="346" parent="334" name="price">
     <column id="1355" parent="412" name="price">
       <Position>3</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="347" parent="334" name="available">
     <column id="1356" parent="412" name="amount">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="348" parent="334" name="description">
     <column id="1357" parent="412" name="description">
       <Position>5</Position>
       <DataType>varchar(800)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <key id="349" parent="334" name="PRIMARY">
     <key id="1358" parent="412" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idProduct</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="350" parent="335" name="id">
     <column id="1359" parent="413" name="schedule_id">
       <Position>1</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="351" parent="335" name="name">
     <column id="1360" parent="413" name="datetime_start">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
@@ -5650,14 +5673,17 @@
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
+    <column id="352" parent="335" name="details">
     <column id="1366" parent="414" name="details">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
+    <column id="353" parent="335" name="price">
     <column id="1367" parent="414" name="price">
       <Position>4</Position>
       <DataType>double|0s</DataType>
     </column>
+    <key id="354" parent="335" name="PRIMARY">
     <column id="1368" parent="414" name="horarios">
       <Position>5</Position>
       <DataType>varchar(1000)|0s</DataType>
@@ -5667,33 +5693,43 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="355" parent="336" name="idUser">
     <column id="1370" parent="415" name="idUser">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
+    <column id="356" parent="336" name="firstname">
     <column id="1371" parent="415" name="firstname">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="357" parent="336" name="lastname">
     <column id="1372" parent="415" name="lastname">
       <Position>3</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="358" parent="336" name="username">
     <column id="1373" parent="415" name="username">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <column id="359" parent="336" name="email">
     <column id="1374" parent="415" name="email">
       <Position>5</Position>
       <DataType>varchar(200)|0s</DataType>
     </column>
+    <column id="360" parent="336" name="rol">
     <column id="1375" parent="415" name="rol">
       <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="361" parent="336" name="password">
+      <Position>7</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
     <column id="1376" parent="415" name="password">
@@ -5701,9 +5737,29 @@
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
+    <key id="362" parent="336" name="PRIMARY">
     <key id="1377" parent="415" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idUser</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="363" parent="337" name="carritocompraid">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="364" parent="337" name="compratotal">
+      <Position>2</Position>
+      <DataType>double|0s</DataType>
+    </column>
+    <column id="365" parent="337" name="productos">
+      <Position>3</Position>
+      <DataType>varchar(800)|0s</DataType>
+    </column>
+    <key id="366" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>carritocompraid</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="1378" parent="416" name="carritocompraid">

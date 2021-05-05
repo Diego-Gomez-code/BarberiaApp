@@ -32,6 +32,11 @@
     <bean id="SpringApplicationEventBus" class="com.proyectoweb.barberia.Shared.Infrastructure.Bus.Event.Spring.SpringApplicationEventBus"/>
     <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
     <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
+
+    <bean id="HibernateProductRepository" class="com.proyectoweb.barberia.Products.Product.Infrastructure.Hibernate.HibernateProductRepository" />
+
+    <bean id="HibernateCarritoCompraRepository" class="com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Hibernate.HibernateCarritoCompraRepository" />
+
     <bean id="userCreator" class="com.proyectoweb.barberia.Users.User.Application.Create.UserCreator">
         <constructor-arg ref="HibernateUserRepository"/>
         <constructor-arg ref="BadWordService"/>
@@ -45,5 +50,38 @@
     </bean>
     <bean id="userAll" class="com.proyectoweb.barberia.Users.User.Application.All.UserAll">
         <constructor-arg ref="HibernateUserRepository"/>
+    </bean>
+
+    <bean id="productAll" class="com.proyectoweb.barberia.Products.Product.Application.All.ProductAll">
+        <constructor-arg ref="HibernateProductRepository" />
+    </bean>
+
+    <bean id="productFinder" class="com.proyectoweb.barberia.Products.Product.Application.Find.ProductFinder">
+        <constructor-arg ref="HibernateProductRepository" />
+    </bean>
+
+    <bean id="productCreator" class="com.proyectoweb.barberia.Products.Product.Application.Create.ProductCreator">
+        <constructor-arg ref="HibernateProductRepository" />
+    </bean>
+
+    <bean id="productModifier" class="com.proyectoweb.barberia.Products.Product.Application.Update.ProductModifier">
+        <constructor-arg ref="HibernateProductRepository" />
+        <constructor-arg ref="HibernateUserRepository" />
+    </bean>
+
+    <bean id="createCarritoCompra" class="com.proyectoweb.barberia.Products.CarritoCompra.Application.Create.CreateCarritoCompra">
+        <constructor-arg ref="HibernateCarritoCompraRepository" />
+    </bean>
+
+    <bean id="CarritoCompraFinder" class="com.proyectoweb.barberia.Products.CarritoCompra.Application.Find.CarritoCompraFinder" >
+        <constructor-arg ref="HibernateCarritoCompraRepository" />
+    </bean>
+
+    <bean id="carritoAddProduct" class="com.proyectoweb.barberia.Products.CarritoCompra.Application.AddProduct.CarritoAddProduct" >
+        <constructor-arg ref="HibernateCarritoCompraRepository" />
+    </bean>
+
+    <bean id="carritoRemoveProduct" class="com.proyectoweb.barberia.Products.CarritoCompra.Application.RemoveProduct.CarritoRemoveProduct" >
+        <constructor-arg ref="HibernateCarritoCompraRepository" />
     </bean>
 </beans>

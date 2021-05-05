@@ -27,10 +27,17 @@ public class HibernateConfigFactory {
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         FileSystemResource resource1 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Users/User/Infrastructure/Hibernate/User.hbm.xml");
+<<<<<<< HEAD
         FileSystemResource resource10 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Services/Service/Infrastructure/Hibernates/Service.hbm.xml");
         FileSystemResource resource11 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Services/Schedule/Infrastructure/Hibernates/Schedule.hmb.xml");
 
         sessionFactory.setMappingLocations(resource1,resource10,resource11);
+=======
+        FileSystemResource resource2 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Products/Product/Infrastructure/Hibernate/Product.hbm.xml");
+        FileSystemResource resource3 = new FileSystemResource("./src/main/java/com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Hibernate/CarritoCompra.hbm.xml");
+
+        sessionFactory.setMappingLocations(resource1, resource2, resource3);
+>>>>>>> Rama1
         return sessionFactory;
     }
 
