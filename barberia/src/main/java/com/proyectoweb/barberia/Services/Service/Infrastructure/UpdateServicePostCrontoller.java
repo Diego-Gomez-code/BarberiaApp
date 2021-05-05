@@ -1,26 +1,24 @@
 package com.proyectoweb.barberia.Services.Service.Infrastructure;
 
-import com.proyectoweb.barberia.Services.Service.Application.ServiceCreator;
+import com.proyectoweb.barberia.Services.Service.Application.ServiceUpdate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.*;
+
 @RestController
 @RequestMapping(value = "/service")
-public final class CreateServicePostController {
+public class UpdateServicePostCrontoller {
 
     @Autowired
-    private ServiceCreator serviceCreator;
+    private ServiceUpdate serviceUpdate;
 
-    @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/update" , produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity execute(@RequestBody Request request){
-
-        serviceCreator.execute(request.getId(), request.getName(), request.getDescription(), request.getPrice());
-        return ResponseEntity.status(HttpStatus.CREATED).body(null);
+        return null;
     }
-
     static class Request {
         private String id;
         private String name;

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.proyectoweb.barberia.Services.Service.Domain.Service" table="Services">
+        <composite-id name="serviceId" class="com.proyectoweb.barberia.Shared.Domain.Services.ServiceId" access="field" >
+            <key-property name="value" column="id" access="field" type="string"/>
+        </composite-id>
+
+        <component name="serviceName" class="com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceName" access="field" >
+            <property name="value" column="name" access="field" type="string"/>
+        </component>
+
+        <component name="serviceDescription" class="com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceDescription" access="field" >
+            <property name="value" column="details" access="field" type="string" />
+        </component>
+
+        <component name="servicePrice" class="com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServicePrice" access="field" >
+            <property name="value" column="price" access="field" length="11" />
+        </component>
+
+    </class>
+</hibernate-mapping>
