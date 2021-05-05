@@ -2,10 +2,7 @@ package com.proyectoweb.barberia.Users.User.Application.Update;
 
 import com.proyectoweb.barberia.Users.User.Domain.*;
 import com.proyectoweb.barberia.Users.User.Domain.Ports.UserRepository;
-import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserEmail;
-import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserFirstName;
-import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserLastName;
-import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserName;
+import com.proyectoweb.barberia.Users.User.Domain.ValueObjects.*;
 
 import java.util.Optional;
 
@@ -23,11 +20,11 @@ public class UserModifier {
         this.validator = new UserValidateWords(service);
     }
 
-    public void execute(String userId, String userFirstName, String userLastName, String userName, String userEmail){
+    public void execute(String userId, String userFirstName, String userLastName, String userName, String userEmail, String userRol){
         validator.execute(new UserName(userName).value());
         Optional<User> actualUser = finder.execute(userId);
         User oldUser = actualUser.get();
-        oldUser.updateUser(new UserFirstName(userFirstName), new UserLastName(userLastName), new UserName(userName), new UserEmail(userEmail));
+        oldUser.updateUser(new UserFirstName(userFirstName), new UserLastName(userLastName), new UserName(userName), new UserEmail(userEmail), new UserRol(userRol));
         repository.update(userId, oldUser);
     }
 }

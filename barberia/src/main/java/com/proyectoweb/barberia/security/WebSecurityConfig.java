@@ -23,6 +23,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/products/find/{id}").permitAll()
                 .antMatchers(HttpMethod.POST, "/products/create").permitAll()
                 .antMatchers(HttpMethod.POST, "/products/update").permitAll()
+                .antMatchers(HttpMethod.POST, "/carritocompra/create").permitAll()
+                .antMatchers(HttpMethod.GET, "/carritocompra/find/{id}").permitAll()
+                .antMatchers(HttpMethod.POST, "/carritocompra/addproduct").permitAll()
+                .antMatchers(HttpMethod.POST, "/carritocompra/removeproduct").permitAll()
                 .anyRequest().authenticated();
     }
 }

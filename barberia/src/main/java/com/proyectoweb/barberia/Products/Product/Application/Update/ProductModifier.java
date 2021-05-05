@@ -24,7 +24,7 @@ public class ProductModifier {
 
     public void execute(String userId, String productId, String name, Integer amount, Double price, String description){
         Optional<User> user = finder.execute(userId);
-        if(user.isEmpty() ){ //Cambiar por if rol == "cliente"
+        if(user.get().getUserRol().value().equals("Cliente")){
             throw new RuntimeException("Operacion invalida por credenciales.");
         }
         Optional<Product> product = productRepository.find(productId);
