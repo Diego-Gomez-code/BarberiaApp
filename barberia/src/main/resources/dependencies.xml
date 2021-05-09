@@ -33,6 +33,8 @@
     <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
     <bean id="HibernateProductRepository" class="com.proyectoweb.barberia.Products.Product.Infrastructure.Hibernate.HibernateProductRepository" />
     <bean id="HibernateCarritoCompraRepository" class="com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Hibernate.HibernateCarritoCompraRepository" />
+    <bean id="HibernateCarritoClienteRepository" class="com.proyectoweb.barberia.CarritoClientes.CarritoCliente.Infrastructure.Hibernate.HibernateCarritoClienteRepository" />
+
     <bean id="userCreator" class="com.proyectoweb.barberia.Users.User.Application.Create.UserCreator">
         <constructor-arg ref="HibernateUserRepository"/>
         <constructor-arg ref="BadWordService"/>
@@ -80,5 +82,13 @@
 
     <bean id="carritoRemoveProduct" class="com.proyectoweb.barberia.Products.CarritoCompra.Application.RemoveProduct.CarritoRemoveProduct" >
         <constructor-arg ref="HibernateCarritoCompraRepository" />
+    </bean>
+
+    <bean id="carritoDeleter" class="com.proyectoweb.barberia.Products.CarritoCompra.Application.Delete.CarritoDeleter" >
+        <constructor-arg ref="HibernateCarritoCompraRepository" />
+    </bean>
+
+    <bean id="carritoClienteCreator" class="com.proyectoweb.barberia.CarritoClientes.CarritoCliente.Application.Create.CarritoClienteCreator" >
+        <constructor-arg ref="HibernateCarritoClienteRepository" />
     </bean>
 </beans>

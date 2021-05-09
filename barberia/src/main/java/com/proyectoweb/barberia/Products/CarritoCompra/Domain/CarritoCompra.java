@@ -51,7 +51,7 @@ public class CarritoCompra {
     public void addProduct(ProductDetails productDetails){
         List<ProductDetails> productsList = this.products.isEmpty() ? new ArrayList<>() : this.products.get();
         productsList.add(productDetails);
-        updateCompraTotal(productDetails.getPrice() * productDetails.getPrice());
+        updateCompraTotal(productDetails.getPrice() * productDetails.getQuantity());
         System.out.println("productid 2: " + productDetails.getProductId());
         this.products = Optional.ofNullable(productsList);
     }
@@ -71,7 +71,7 @@ public class CarritoCompra {
         List<ProductDetails> productsList = this.products.get();
         ProductDetails actual = productsList.stream().filter(product -> product.equalsProductId(productDetails)).findFirst().get();
         productsList.remove(actual);
-        updateCompraTotalMinus(productDetails.getPrice() * productDetails.getPrice());
+        updateCompraTotalMinus(productDetails.getPrice() * productDetails.getQuantity());
         this.products = Optional.ofNullable(productsList);
     }
 

@@ -2,13 +2,11 @@ package com.proyectoweb.barberia.Products.CarritoCompra.Infrastructure.Controlle
 
 import com.proyectoweb.barberia.Products.CarritoCompra.Application.Find.CarritoCompraFinder;
 import com.proyectoweb.barberia.Products.CarritoCompra.Application.Find.CarritoCompraResponse;
+import com.proyectoweb.barberia.Products.CarritoCompra.Domain.Exceptions.CarritoCompraNotExist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -23,6 +21,14 @@ public class FindCarritoCompraGetController {
     public ResponseEntity<HashMap> execute(@PathVariable("id") String id){
         CarritoCompraResponse response = finder.execute(id);
         return ResponseEntity.status(HttpStatus.OK).body(response.response());
+    }
+
+    @ExceptionHandler(CarritoCompraNotExist.class)
+    public ResponseEntity<HashMap> handleCarritoNotExistException(CarritoCompraNotExist exception){
+        HashMap<String, String> response = new HashMap<String, String>() {{
+            put("error", exception.getMessage());
+        }};
+        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(response);
     }
 
 }

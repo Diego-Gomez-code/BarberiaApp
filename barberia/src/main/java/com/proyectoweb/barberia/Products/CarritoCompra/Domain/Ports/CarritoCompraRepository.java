@@ -10,4 +10,5 @@ public interface CarritoCompraRepository {
     Optional<CarritoCompra> find(String carritoCompraId);
     void save(CarritoCompra carritoCompra);
     Optional<List<CarritoCompra>> all();
+    void delete(CarritoCompra carritoCompra);
 }

@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.proyectoweb.barberia.CarritoClientes.CarritoCliente.Domain.CarritoCliente" table="carritocliente">
+        <composite-id name="carritoClienteId" class="com.proyectoweb.barberia.CarritoClientes.CarritoCliente.Domain.ValueObjects.CarritoClienteId" access="field">
+            <key-property name="value" column="carritoclienteid" access="field" length="200" />
+        </composite-id>
+        
+        <component name="userId" class="com.proyectoweb.barberia.Shared.Domain.Users.UserId" access="field">
+            <property name="value" column="userid" access="field" type="string" />
+        </component>
+
+        <component name="carritoCompraId" class="com.proyectoweb.barberia.Shared.Domain.Products.CarritoCompraId" access="field">
+            <property name="value" column="carritocompraid" access="field" type="string" />
+        </component>
+
+        <component name="metodoDePago" class="com.proyectoweb.barberia.CarritoClientes.CarritoCliente.Domain.ValueObjects.MetodoDePago" access="field">
+            <property name="value" column="metododepago" access="field" type="string" />
+        </component>
+    </class>
+</hibernate-mapping>

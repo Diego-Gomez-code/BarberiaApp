@@ -54,4 +54,11 @@ public class HibernateCarritoCompraRepository implements CarritoCompraRepository
         Query<CarritoCompra> query = session.createQuery(criteriaQuery);
         return Optional.ofNullable(query.getResultList());
     }
+
+    @Override
+    public void delete(CarritoCompra carritoCompra){
+        sessionFactory.getCurrentSession().delete(carritoCompra);
+        sessionFactory.getCurrentSession().flush();
+        sessionFactory.getCurrentSession().clear();
+    }
 }
