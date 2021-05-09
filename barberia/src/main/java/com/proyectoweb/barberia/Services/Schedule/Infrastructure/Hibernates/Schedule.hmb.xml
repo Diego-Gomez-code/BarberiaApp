@@ -13,7 +13,7 @@
         </component>
 
         <component name="scheduleDateStart" class="com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleDate" access="field" >
-            <property name="value" column="datetome_start" access="field" type="date" />
+            <property name="value" column="datetime_start" access="field" type="timestamp" />
         </component>
 
         <component name="scheduleOption" class="com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleOption" access="field" >

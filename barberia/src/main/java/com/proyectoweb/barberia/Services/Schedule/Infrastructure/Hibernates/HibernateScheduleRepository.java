@@ -8,9 +8,9 @@ import com.proyectoweb.barberia.Shared.Domain.Schedule.ScheduleId;
 import com.proyectoweb.barberia.Shared.Domain.Services.ServiceId;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -47,15 +47,16 @@ public class HibernateScheduleRepository implements ScheduleRepository {
         ScheduleId id = new ScheduleId(scheduleId);
         return Optional.ofNullable(sessionFactory.getCurrentSession().byId(aggregateClass).load(id));
     }
+
     @Override
-    public Optional<List<Schedule>> findAll(){
+    public Optional<List<Schedule>> findAll() {
+
         Session session = sessionFactory.getCurrentSession();
         CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
         CriteriaQuery<Schedule> criteriaQuery = criteriaBuilder.createQuery(Schedule.class);
         Root<Schedule> root = criteriaQuery.from(Schedule.class);
         criteriaQuery.select(root);
-        //TODO: verificar el Query<Schedule> que da problema
-        //Query<Schedule> query = session.createQuery(criteriaQuery);
-        return Optional.ofNullable(null/*query.getResultList()*/);
+        Query<Schedule> query = session.createQuery(criteriaQuery);
+        return Optional.ofNullable(query.getResultList());
     }
 }

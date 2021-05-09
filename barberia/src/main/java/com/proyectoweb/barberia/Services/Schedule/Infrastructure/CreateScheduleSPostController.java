@@ -21,30 +21,30 @@ public class CreateScheduleSPostController {
 
     @PostMapping(value = "create")
     public ResponseEntity execute(@RequestBody Request request){
-        scheduleCreator.execute(request.getId(),request.getTime(),request.getService_id(),request.getType());
+        scheduleCreator.execute(request.getSchedule_id(), request.getDatetime_start(),request.getService_id(),request.getType());
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 
     static class Request{
-        private String id;
-        private Timestamp time;
+        private String schedule_id;
+        private String datetime_start;
         private String service_id;
         private char type;
 
-        public String getId() {
-            return id;
+        public String getSchedule_id() {
+            return schedule_id;
         }
 
-        public void setId(String id) {
-            this.id = id;
+        public void setSchedule_id(String schedule_id) {
+            this.schedule_id = schedule_id;
         }
 
-        public Timestamp getTime() {
-            return time;
+        public String getDatetime_start() {
+            return datetime_start;
         }
 
-        public void setTime(Timestamp time) {
-            this.time = time;
+        public void setDatetime_start(String datetime_start) {
+            this.datetime_start = datetime_start;
         }
 
         public String getService_id() {

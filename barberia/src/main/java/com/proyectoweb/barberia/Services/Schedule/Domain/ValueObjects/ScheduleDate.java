@@ -11,6 +11,7 @@ public class ScheduleDate {
 
     public ScheduleDate() {
         this.value = new Timestamp(System.currentTimeMillis());
+        
     }
     public ScheduleDate(Timestamp time) { this.value = time;}
 

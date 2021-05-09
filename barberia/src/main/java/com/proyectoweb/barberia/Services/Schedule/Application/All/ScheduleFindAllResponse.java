@@ -10,6 +10,10 @@ public class ScheduleFindAllResponse {
 
     private List<Schedule> scheduleList;
 
+    public ScheduleFindAllResponse(List<Schedule> scheduleList) {
+        this.scheduleList = scheduleList;
+    }
+
     public List<HashMap> response(){
         List<HashMap> response = scheduleList.stream().map(p -> p.data()).collect(Collectors.toList());
         return response;

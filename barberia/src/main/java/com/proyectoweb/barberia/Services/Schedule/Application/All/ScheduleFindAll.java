@@ -17,7 +17,9 @@ public class ScheduleFindAll {
 
     public List<Schedule> execute(){
         Optional<List<Schedule>> horarios = scheduleRepository.findAll();
-        
+        if(horarios.isEmpty()){
+            //TODO: Exception horarios empty
+        }
         return horarios.get();
     }
 }

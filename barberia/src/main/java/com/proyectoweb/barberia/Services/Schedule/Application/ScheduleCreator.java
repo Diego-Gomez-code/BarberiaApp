@@ -17,8 +17,8 @@ public class ScheduleCreator {
         this.repository = repository;
     }
 
-    public void execute( String id, Timestamp time, String service_id, char type){
-        Schedule schedule = new Schedule(new ScheduleId(id),new ServiceId(service_id),new ScheduleDate(),new ScheduleOption(type));
+    public void execute( String id, String time, String service_id, char type){
+        Schedule schedule = new Schedule(new ScheduleId(id),new ServiceId(service_id),new ScheduleDate(Timestamp.valueOf(time)),new ScheduleOption(type));
         repository.save(schedule);
     }
 }

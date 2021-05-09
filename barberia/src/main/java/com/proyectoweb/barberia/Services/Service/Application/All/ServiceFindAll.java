@@ -18,7 +18,7 @@ public class ServiceFindAll {
         Optional<List<Service>> services = serviceRepository.findAll();
         if (services.isEmpty())
         {
-            //TODO: Exception
+            //TODO: Exception services empty
         }
         return services.get();
 

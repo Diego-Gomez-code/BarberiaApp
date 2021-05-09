@@ -9,6 +9,9 @@ public class ScheduleOption {
         this.value = value;
     }
 
+    public ScheduleOption() {
+    }
+
     public char value(){return this.value;}
 
     public void validate(char value){

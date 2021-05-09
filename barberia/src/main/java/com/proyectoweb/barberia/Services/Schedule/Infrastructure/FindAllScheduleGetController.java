@@ -1,6 +1,7 @@
 package com.proyectoweb.barberia.Services.Schedule.Infrastructure;
 
 import com.proyectoweb.barberia.Services.Schedule.Application.All.ScheduleFindAll;
+import com.proyectoweb.barberia.Services.Schedule.Application.All.ScheduleFindAllResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ public class FindAllScheduleGetController {
 
     @RequestMapping(value = "/findAll")
     private ResponseEntity<List<HashMap>> execute(){
-        return ResponseEntity.status(HttpStatus.OK).body(null);
+        ScheduleFindAllResponse response = new ScheduleFindAllResponse(scheduleFindAll.execute());
+        return ResponseEntity.status(HttpStatus.OK).body(response.response());
     }
 }

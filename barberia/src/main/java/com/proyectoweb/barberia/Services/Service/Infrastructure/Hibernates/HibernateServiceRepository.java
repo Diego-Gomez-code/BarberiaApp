@@ -58,10 +58,6 @@ public class HibernateServiceRepository implements ServiceRepository {
         Root<Service> root = criteriaQuery.from(Service.class);
         criteriaQuery.select(root);
         Query<Service> query = session.createQuery(criteriaQuery);
-
-
-        //String select = "";
-        //Query query = sessionFactory.getCurrentSession().createQuery("From Service");
         return Optional.ofNullable(query.getResultList());
     }
 }
