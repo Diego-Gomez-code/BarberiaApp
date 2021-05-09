@@ -20,17 +20,6 @@ public class FindAllGetControler {
     @Autowired
     private ServiceFindAll serviceFindAll;
 
-    /*
-    @RequestMapping(value = "/findAll")
-    public List<Service> execute(){
-        System.out.println("Entro al controlador findALL");
-        List<Service> listar = null;
-        listar = this.serviceFindAll.execute();
-        listar.forEach(System.out::println);
-        return listar;
-    }
-    */
-
     @RequestMapping(value = "/findAll")
     public ResponseEntity<List<HashMap>> execute(){
         ServiceFindAllResponse response = new ServiceFindAllResponse(serviceFindAll.execute());

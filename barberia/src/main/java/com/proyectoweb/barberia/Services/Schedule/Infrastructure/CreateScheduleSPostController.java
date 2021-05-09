@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 @RestController
 @RequestMapping(value = "/schedule")
@@ -20,13 +21,13 @@ public class CreateScheduleSPostController {
 
     @PostMapping(value = "create")
     public ResponseEntity execute(@RequestBody Request request){
-        scheduleCreator.execute();
+        scheduleCreator.execute(request.getId(),request.getTime(),request.getService_id(),request.getType());
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }
 
     static class Request{
         private String id;
-        private Date time;
+        private Timestamp time;
         private String service_id;
         private char type;
 
@@ -38,11 +39,11 @@ public class CreateScheduleSPostController {
             this.id = id;
         }
 
-        public Date getTime() {
+        public Timestamp getTime() {
             return time;
         }
 
-        public void setTime(Date time) {
+        public void setTime(Timestamp time) {
             this.time = time;
         }
 

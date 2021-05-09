@@ -12,7 +12,7 @@ public class ScheduleOption {
     public char value(){return this.value;}
 
     public void validate(char value){
-        if(value != 'p' || value != 'c'){
+        if(value != 'p' ){
             throw new RuntimeException("Character not valid");
         }
     }

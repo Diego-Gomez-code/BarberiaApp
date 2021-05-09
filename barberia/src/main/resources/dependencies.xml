@@ -27,6 +27,13 @@
     <bean id="ScheduleFindById" class="com.proyectoweb.barberia.Services.Schedule.Application.Find.ScheduleFindById">
         <constructor-arg ref="HibernateScheduleRepository"/>
     </bean>
+    <bean id="ScheduleFindAll" class="com.proyectoweb.barberia.Services.Schedule.Application.All.ScheduleFindAll">
+        <constructor-arg ref="HibernateScheduleRepository"/>
+    </bean>
+
+
+
+
     <bean id="SpringApplicationEventBus" class="com.proyectoweb.barberia.Shared.Infrastructure.Bus.Event.Spring.SpringApplicationEventBus"/>
     
     <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
