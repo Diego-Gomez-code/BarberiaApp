@@ -20,6 +20,7 @@
     <bean id="HibernateScheduleRepository" class="com.proyectoweb.barberia.Services.Schedule.Infrastructure.Hibernates.HibernateScheduleRepository"/>
     <bean id="ScheduleCreator" class="com.proyectoweb.barberia.Services.Schedule.Application.ScheduleCreator">
         <constructor-arg ref="HibernateScheduleRepository"/>
+        <constructor-arg ref="SpringApplicationEventBus"/>
     </bean>
     <bean id="UpdateSchedule" class="com.proyectoweb.barberia.Services.Schedule.Application.UpdateSchedule">
         <constructor-arg ref="HibernateScheduleRepository"/>
