@@ -72,4 +72,10 @@ public class Service {
         this.schedules = Optional.ofNullable(schedulesList);
 
     }
+
+    public void updateService(String serviceName, String serviceDescription, Double servicePrice){
+        this.serviceName = new ServiceName(serviceName);
+        this.serviceDescription = new ServiceDescription(serviceDescription);
+        this.servicePrice = new ServicePrice(servicePrice);
+    }
 }

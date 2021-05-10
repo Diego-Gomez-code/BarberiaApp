@@ -1,5 +1,6 @@
 package com.proyectoweb.barberia.Services.Service.Domain.Ports;
 
+import com.proyectoweb.barberia.Products.CarritoCompra.Domain.CarritoCompra;
 import com.proyectoweb.barberia.Services.Service.Domain.Service;
 import com.proyectoweb.barberia.Users.User.Domain.User;
 
@@ -11,4 +12,5 @@ public interface ServiceRepository {
     Optional<Service> find(String serviceId);
     void update(Service service);
     Optional<List<Service>> findAll();
+    void delete(Service service);
 }

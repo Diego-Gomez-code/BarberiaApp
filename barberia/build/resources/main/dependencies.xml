@@ -17,6 +17,9 @@
     <bean id="ServiceUpdate" class="com.proyectoweb.barberia.Services.Service.Application.ServiceUpdate">
         <constructor-arg ref="HibernateServiceRepository"/>
     </bean>
+    <bean id="ServiceDeleter" class="com.proyectoweb.barberia.Services.Service.Application.ServiceDeleter" >
+        <constructor-arg ref="HibernateServiceRepository" />
+    </bean>
 
     <bean id="ScheduleUpdateService" class="com.proyectoweb.barberia.Services.Service.Application.ScheduleUpdateService">
         <constructor-arg ref="HibernateServiceRepository"/>

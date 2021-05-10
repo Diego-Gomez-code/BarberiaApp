@@ -59,4 +59,11 @@ public class HibernateServiceRepository implements ServiceRepository {
         Query<Service> query = session.createQuery(criteriaQuery);
         return Optional.ofNullable(query.getResultList());
     }
+
+    @Override
+    public void delete(Service service) {
+        sessionFactory.getCurrentSession().delete(service);
+        sessionFactory.getCurrentSession().flush();
+        sessionFactory.getCurrentSession().clear();
+    }
 }

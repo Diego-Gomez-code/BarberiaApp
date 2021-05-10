@@ -35,6 +35,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/service/create").permitAll()
                 .antMatchers(HttpMethod.GET, "/service/find/{id}").permitAll()
                 .antMatchers(HttpMethod.GET, "/service/findAll").permitAll()
+                .antMatchers(HttpMethod.POST, "/service/delete/{id}").permitAll()
+                .antMatchers(HttpMethod.POST, "/service/update/{id}").permitAll()
                 //CarritoCliente endpoints
                 .antMatchers(HttpMethod.POST, "/carritocliente/create").permitAll()
                 //Schedule endpoint
