@@ -29,7 +29,7 @@ public class CreateScheduleSPostController {
         private String schedule_id;
         private String datetime_start;
         private String service_id;
-        private char type;
+        private String type;
 
         public String getSchedule_id() {
             return schedule_id;
@@ -55,11 +55,11 @@ public class CreateScheduleSPostController {
             this.service_id = service_id;
         }
 
-        public char getType() {
+        public String getType() {
             return type;
         }
 
-        public void setType(char type) {
+        public void setType(String type) {
             this.type = type;
         }
     }

@@ -17,7 +17,7 @@
         </component>
 
         <component name="scheduleOption" class="com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleOption" access="field" >
-            <property name="value" column="type" access="field" type="char" />
+            <property name="value" column="type" access="field" type="string" />
         </component>
     </class>
 </hibernate-mapping>

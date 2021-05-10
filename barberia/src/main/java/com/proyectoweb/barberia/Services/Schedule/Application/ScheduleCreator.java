@@ -20,8 +20,8 @@ public class ScheduleCreator {
         this.eventBus = eventBus;
     }
 
-    public void execute( String id, String time, String service_id, char type){
-        Schedule schedule = new Schedule(new ScheduleId(id),new ServiceId(service_id),new ScheduleDate(Timestamp.valueOf(time)),new ScheduleOption(type));
+    public void execute( String id, String time, String service_id, String type){
+        Schedule schedule = Schedule.creator(new ScheduleId(id),new ServiceId(service_id),new ScheduleDate(Timestamp.valueOf(time)),new ScheduleOption(type));
         repository.save(schedule);
         this.eventBus.publish(schedule.pullDomainEvents());
     }

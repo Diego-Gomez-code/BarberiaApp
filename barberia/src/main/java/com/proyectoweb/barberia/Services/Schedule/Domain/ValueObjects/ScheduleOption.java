@@ -2,9 +2,9 @@ package com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects;
 
 public class ScheduleOption {
 
-    private char value;
+    private String value;
 
-    public ScheduleOption(char value) {
+    public ScheduleOption(String value) {
         this.validate(value);
         this.value = value;
     }
@@ -12,10 +12,10 @@ public class ScheduleOption {
     public ScheduleOption() {
     }
 
-    public char value(){return this.value;}
+    public String value(){return this.value;}
 
-    public void validate(char value){
-        if(value != 'p' ){
+    public void validate(String value){
+        if(!value.equals("c") && !value.equals("p")){
             throw new RuntimeException("Character not valid");
         }
     }

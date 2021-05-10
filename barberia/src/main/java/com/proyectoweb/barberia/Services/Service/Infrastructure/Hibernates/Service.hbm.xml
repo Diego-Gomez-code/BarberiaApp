@@ -20,5 +20,8 @@
             <property name="value" column="price" access="field" length="11" />
         </component>
 
+        <property name="schedules" column="horarios" access="field">
+            <type name="com.proyectoweb.barberia.Services.Service.Infrastructure.Hibernates.ScheduleCustomType"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- Hibernates Service -->
     <bean id="HibernateServiceRepository" class="com.proyectoweb.barberia.Services.Service.Infrastructure.Hibernates.HibernateServiceRepository" />
     <bean id="ServiceCreator" class="com.proyectoweb.barberia.Services.Service.Application.ServiceCreator">
         <constructor-arg ref="HibernateServiceRepository"/>
@@ -17,9 +18,20 @@
         <constructor-arg ref="HibernateServiceRepository"/>
     </bean>
 
+    <bean id="ScheduleUpdateService" class="com.proyectoweb.barberia.Services.Service.Application.ScheduleUpdateService">
+        <constructor-arg ref="HibernateServiceRepository"/>
+    </bean>
+    <bean id="ServiceUpdateSchedule" class="com.proyectoweb.barberia.Services.Service.Application.ServiceUpdateSchedule">
+        <constructor-arg ref="ScheduleUpdateService"/>
+    </bean>
+
+    <!-- Fin Hibernates Service -->
+
+    <!-- Hibernates Schedule -->
     <bean id="HibernateScheduleRepository" class="com.proyectoweb.barberia.Services.Schedule.Infrastructure.Hibernates.HibernateScheduleRepository"/>
     <bean id="ScheduleCreator" class="com.proyectoweb.barberia.Services.Schedule.Application.ScheduleCreator">
         <constructor-arg ref="HibernateScheduleRepository"/>
+        <constructor-arg ref="SpringApplicationEventBus"/>
     </bean>
     <bean id="UpdateSchedule" class="com.proyectoweb.barberia.Services.Schedule.Application.UpdateSchedule">
         <constructor-arg ref="HibernateScheduleRepository"/>
@@ -30,12 +42,12 @@
     <bean id="ScheduleFindAll" class="com.proyectoweb.barberia.Services.Schedule.Application.All.ScheduleFindAll">
         <constructor-arg ref="HibernateScheduleRepository"/>
     </bean>
+    <!-- Fin Hibernates Schedule -->
 
-
-
-
+    <!-- Config para el EventBUS -->
     <bean id="SpringApplicationEventBus" class="com.proyectoweb.barberia.Shared.Infrastructure.Bus.Event.Spring.SpringApplicationEventBus"/>
-    
+    <!-- fin config EventBus -->
+
     <bean id="BadWordService" class="com.proyectoweb.barberia.Users.User.Infrastructure.BadWordsService"/>
     <bean id="HibernateUserRepository" class="com.proyectoweb.barberia.Users.User.Infrastructure.Hibernate.HibernateUserRepository" />
     <bean id="HibernateProductRepository" class="com.proyectoweb.barberia.Products.Product.Infrastructure.Hibernate.HibernateProductRepository" />

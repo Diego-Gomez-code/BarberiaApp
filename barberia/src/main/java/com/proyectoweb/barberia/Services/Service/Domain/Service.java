@@ -6,9 +6,11 @@ import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceName
 import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServicePrice;
 import com.proyectoweb.barberia.Shared.Domain.Services.ServiceId;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Service {
 
@@ -33,22 +35,8 @@ public class Service {
         return new Service( serviceId,  serviceName,  serviceDescription,  servicePrice, null);
     }
 
-    public String info(){
-        return "El servicio: " + this.serviceName.value() + " vale: " + this.servicePrice.value();
-    }
-
     public boolean equalsById(String id){
         return this.serviceId.equals(new ServiceId(id));
-    }
-
-    public HashMap<String,String> busqueda(List<Service> services){
-        HashMap<String,String> resp = new HashMap<String,String>();
-        for (Service valor:
-             services) {
-            resp.put("Servicio",valor.info());
-            resp.put("valores",valor.info());
-        }
-        return resp;
     }
 
     public HashMap<String, Object> data()
@@ -60,5 +48,28 @@ public class Service {
             put("price", servicePrice.value());
         }};
         return data;
+    }
+
+    public Optional<List<HashMap<String, Object>>> getSchedules(){
+        Optional<List<HashMap<String, Object>>> response = Optional.empty();
+        if(this.schedules.isPresent()){
+            response = Optional.of(this.schedules.get().stream().map(schedule -> schedule.data()).collect(Collectors.toList()));
+        }
+        return response;
+    }
+
+
+
+    public void addSchedule(Schedule schedule){
+        List<Schedule> schedulesList = this.schedules.isEmpty() ? new ArrayList<>() : this.schedules.get();
+        for (Schedule s: schedulesList) {
+            if(schedule.data().get("datetime_start").equals(s.data().get("datetime_start"))){
+                System.out.println("error fechas iguales");
+                new RuntimeException("Ya hay una cita agendada");
+            }
+        }
+        schedulesList.add(schedule);
+        this.schedules = Optional.ofNullable(schedulesList);
+
     }
 }

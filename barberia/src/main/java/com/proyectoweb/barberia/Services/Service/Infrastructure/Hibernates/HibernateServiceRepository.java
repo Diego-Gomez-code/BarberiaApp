@@ -51,7 +51,6 @@ public class HibernateServiceRepository implements ServiceRepository {
 
     @Override
     public Optional<List<Service>> findAll() {
-
         Session session = sessionFactory.getCurrentSession();
         CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
         CriteriaQuery<Service> criteriaQuery = criteriaBuilder.createQuery(Service.class);

@@ -5,11 +5,18 @@ import com.proyectoweb.barberia.Shared.Domain.Services.ScheduleCreatedDomainEven
 import org.springframework.context.event.EventListener;
 
 @DomainEventSubscriber({ScheduleCreatedDomainEvent.class})
-public class ServiceUpdateSchedule {
+public final class ServiceUpdateSchedule {
+
+    private ScheduleUpdateService scheduleUpdateService;
+
+    public ServiceUpdateSchedule(ScheduleUpdateService scheduleUpdateService) {
+        this.scheduleUpdateService = scheduleUpdateService;
+    }
 
     @EventListener
     public void on(ScheduleCreatedDomainEvent event) {
-        System.out.println("Llego evento " + event.eventName() + "Date "+ event.getDateStart());
+        System.out.println("Llego evento " + event.eventName() + " Date "+ event.getDateStart());
+        this.scheduleUpdateService.execute(event.getServiceId(),event.getScheduleId(), event.getDateStart(),event.getOption());
     }
 
 }
