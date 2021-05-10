@@ -18,7 +18,7 @@ public class ServiceUpdate {
         //TODO: Ver si el id de userdomain es para ver que el usuario puede modificar o para que lo usaron
         Optional<Service> service = serviceRepository.find(serviceId);
         if(service.isEmpty()){
-            throw new ServiceNotExist("El carrito con id " + serviceId + " no existe.");
+            throw new ServiceNotExist("El servicio con id " + serviceId + " no existe.");
         }
         Service service1 = service.get();
         service1.updateService(serviceName, serviceDescription, servicePrice);

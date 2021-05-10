@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.proyectoweb.barberia.Services.CarritoService.Domain.CarritoServices" table="CarritoServices">
+        <composite-id name="carritoServiceId" class="com.proyectoweb.barberia.Shared.Domain.CarritoService.CarritoServiceId" access="field" >
+            <key-property name="value" column="carritoId" access="field" type="string"/>
+        </composite-id>
+
+        <component name="serviceId" class="com.proyectoweb.barberia.Shared.Domain.Services.ServiceId" access="field" >
+            <property name="value" column="serviceId" access="field" type="string"/>
+        </component>
+
+        <component name="scheduleDate" class="com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleDate" access="field" >
+            <property name="value" column="reserva" access="field" type="timestamp" />
+        </component>
+
+        <component name="servicePrice" class="com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServicePrice" access="field" >
+            <property name="value" column="price" access="field" length="11" />
+        </component>
+
+        <component name="userId" class="com.proyectoweb.barberia.Shared.Domain.Users.UserId" access="field" >
+            <property name="value" column="clienteId" access="field" type="string" />
+        </component>
+
+    </class>
+</hibernate-mapping>

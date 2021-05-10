@@ -30,6 +30,13 @@
 
     <!-- Fin Hibernates Service -->
 
+    <!-- Hibernate CarritoService -->
+    <bean id="HibernatesCarritoServiceRepository" class="com.proyectoweb.barberia.Services.CarritoService.Infrastructure.Hibernates.HibernatesCarritoServicesReposiroty"/>
+    <bean id="CarritoFindAll" class="com.proyectoweb.barberia.Services.CarritoService.Application.All.CarritoFindAll">
+        <constructor-arg ref="HibernatesCarritoServiceRepository"/>
+    </bean>
+    <!-- Fin Hibernate CarritoService -->
+
     <!-- Hibernates Schedule -->
     <bean id="HibernateScheduleRepository" class="com.proyectoweb.barberia.Services.Schedule.Infrastructure.Hibernates.HibernateScheduleRepository"/>
     <bean id="ScheduleCreator" class="com.proyectoweb.barberia.Services.Schedule.Application.ScheduleCreator">
@@ -38,6 +45,11 @@
     </bean>
     <bean id="UpdateSchedule" class="com.proyectoweb.barberia.Services.Schedule.Application.UpdateSchedule">
         <constructor-arg ref="HibernateScheduleRepository"/>
+        <constructor-arg ref="SpringApplicationEventBus"/>
+    </bean>
+    <bean id="ScheduleDeleter" class="com.proyectoweb.barberia.Services.Schedule.Application.ScheduleDeleter">
+        <constructor-arg ref="HibernateScheduleRepository"/>
+        <constructor-arg ref="SpringApplicationEventBus"/>
     </bean>
     <bean id="ScheduleFindById" class="com.proyectoweb.barberia.Services.Schedule.Application.Find.ScheduleFindById">
         <constructor-arg ref="HibernateScheduleRepository"/>

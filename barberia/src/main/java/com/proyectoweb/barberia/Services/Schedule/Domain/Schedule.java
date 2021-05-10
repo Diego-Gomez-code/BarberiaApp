@@ -2,6 +2,9 @@ package com.proyectoweb.barberia.Services.Schedule.Domain;
 
 import com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleDate;
 import com.proyectoweb.barberia.Services.Schedule.Domain.ValueObjects.ScheduleOption;
+import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceDescription;
+import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceName;
+import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServicePrice;
 import com.proyectoweb.barberia.Shared.Domain.Aggregate.AggregateRoot;
 import com.proyectoweb.barberia.Shared.Domain.Schedule.ScheduleId;
 import com.proyectoweb.barberia.Shared.Domain.Services.ScheduleCreatedDomainEvent;
@@ -49,5 +52,11 @@ public class Schedule extends AggregateRoot {
             put("type", scheduleOption.value());
         }};
         return data;
+    }
+
+    public void updateSchedule(String date, String serviceId, String type){
+        this.scheduleDateStart = new ScheduleDate(Timestamp.valueOf(date));
+        this.serviceId = new ServiceId(serviceId);
+        this.scheduleOption = new ScheduleOption(type);
     }
 }
