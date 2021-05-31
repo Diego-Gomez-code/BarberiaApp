@@ -59,4 +59,11 @@ public class HibernateScheduleRepository implements ScheduleRepository {
         Query<Schedule> query = session.createQuery(criteriaQuery);
         return Optional.ofNullable(query.getResultList());
     }
+
+    @Override
+    public void delete(Schedule schedule) {
+        sessionFactory.getCurrentSession().delete(schedule);
+        sessionFactory.getCurrentSession().flush();
+        sessionFactory.getCurrentSession().clear();
+    }
 }
