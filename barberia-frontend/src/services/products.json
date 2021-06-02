@@ -1,0 +1,58 @@
+[
+	{
+		"idProduct" : 1,
+		"name" : "Espuma de Afeitar",
+		"price" : 20000,
+		"amount" : 20,
+		"description" : "espumita fancy para afeitarse la carita.",
+		"image": "espuma.jpg"
+	},
+	{
+		"idProduct" : 2,
+		"name" : "Maquina de Afeitar",
+		"price" : 30000,
+		"amount" : 30,
+		"description" : "Maquina completa para feitar asi bien pro de las automaticas.",
+		"image": "maquina.jpg"
+	},
+	{
+		"idProduct" : 3,
+		"name" : "Cuchilla",
+		"price" : 40000,
+		"amount" : 50,
+		"description" : "Cuchillas clasicas asi bien makia que utilizan los pros.",
+		"image": "cuchilla.jpg"
+	},
+	{
+		"idProduct" : 4,
+		"name" : "Tijeras Para Cabello",
+		"price" : 15000,
+		"amount" : 10,
+		"description" : "Tijeritas de esas que cortan bonito para peluquiarse.",
+		"image": "tijeras.jpg"
+	},
+	{
+		"idProduct" : 5,
+		"name" : "Repuestos de Cuchilla",
+		"price" : 5000,
+		"amount" : 50,
+		"description" : "respuestos para la cuchilla y no pa cortarse las venas grax.",
+		"image": "repuestos.jpg"
+	},
+	{
+		"idProduct" : 6,
+		"name" : "Tinte",
+		"price" : 40000,
+		"amount" : 5,
+		"description" : "Tinte para pintarse el peliño o barbiña.",
+		"image": "tinte.jpg"
+	},
+	{
+		"idProduct" : 10,
+		"name" : "Cerita",
+		"price" : 15500,
+		"amount" : 6,
+		"description" : "No se que es esta vaina xd.",
+		"image": "cerita.jpg"
+	}
+]
