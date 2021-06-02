@@ -44,7 +44,7 @@ export default defineComponent({
 .products {
   max-width: 90rem;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
 }
 .products-title {
   font-size: 2rem;

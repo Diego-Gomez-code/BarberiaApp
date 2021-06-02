@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="Vue logo" class="img-ini" src="../assets/barberia.jpg" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -16,3 +16,14 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.home {
+  align-items: center;
+  justify-content: center;
+}
+.img-ini {
+  height: 40rem;
+  width: 100%;
+}
+</style>

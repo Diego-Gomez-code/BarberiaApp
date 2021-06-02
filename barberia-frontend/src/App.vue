@@ -4,6 +4,9 @@
       <router-link to="/">Home</router-link>
       <router-link to="/products">Productos</router-link>
       <router-link to="/services">Servicios</router-link>
+      <div class="profile">
+        <router-link to="/">Login</router-link>
+      </div>
     </div>
   </div>
   <router-view />
@@ -11,7 +14,7 @@
 
 <style lang="scss">
 body {
-  background: aliceblue;
+  background: #f5f5f5;
   margin: 0 !important;
 }
 
@@ -25,8 +28,11 @@ body {
 #nav {
   padding: 30px;
   background: #333333;
+  position: fixed;
+  width: 100%;
   a {
     font-weight: bold;
+
     margin: 10px;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -34,5 +40,12 @@ body {
       color: #287df5;
     }
   }
+  a:hover {
+    color: rgb(0, 182, 232);
+  }
+}
+.profile {
+  float: right;
+  margin-right: 50px;
 }
 </style>
