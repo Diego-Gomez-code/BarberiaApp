@@ -18,7 +18,7 @@ public class ProductUpdatePostController {
 
     @PostMapping(value = "/update",  produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity execute(@RequestBody Request request){
-        modifier.execute(request.getUserId(), request.getProductId(), request.getName(), request.getAmount(), request.getPrice(), request.getDescription());
+        modifier.execute(request.getUserId(), request.getProductId(), request.getName(), request.getAmount(), request.getPrice(), request.getDescription(), request.getImage());
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(null);
     }
 
@@ -37,6 +37,7 @@ public class ProductUpdatePostController {
         private Integer amount;
         private Double price;
         private String description;
+        private String image;
 
         public String getUserId() {
             return userId;
@@ -84,6 +85,14 @@ public class ProductUpdatePostController {
 
         public void setDescription(String description) {
             this.description = description;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
         }
     }
 }

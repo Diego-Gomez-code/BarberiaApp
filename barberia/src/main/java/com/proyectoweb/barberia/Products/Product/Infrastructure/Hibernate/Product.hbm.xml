@@ -24,5 +24,9 @@
             <property name="value" column="description" access="field" type="string" />
         </component>
 
+        <component name="productImage" class="com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductImage" access="field">
+            <property name="value" column="image" access="field" type="string" />
+        </component>
+
     </class>
 </hibernate-mapping>

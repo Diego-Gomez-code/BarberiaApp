@@ -19,7 +19,7 @@ public class CreateProductPostController {
 
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity execute(@RequestBody Request request){
-        creator.execute(request.getId(), request.getName(), request.getAmount(), request.getPrice(), request.getDescription());
+        creator.execute(request.getId(), request.getName(), request.getAmount(), request.getPrice(), request.getDescription(), request.getImage());
         return ResponseEntity.status(HttpStatus.CREATED).body(null);
     }
 
@@ -29,6 +29,7 @@ public class CreateProductPostController {
         private Integer amount;
         private Double price;
         private String description;
+        private String image;
 
         public String getId() {
             return id;
@@ -68,6 +69,14 @@ public class CreateProductPostController {
 
         public void setDescription(String description) {
             this.description = description;
+        }
+
+        public String getImage() {
+            return image;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
         }
     }
 

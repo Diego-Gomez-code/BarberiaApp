@@ -13,8 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, Ref, ref } from "vue";
-import { Product } from "@/types/Product";
-import productsApi from "@/services/products.json";
+import { useProducts } from "@/uses/useProducts";
 import ProductCard from "@/components/products/ProductCard.vue";
 
 export default defineComponent({
@@ -23,18 +22,7 @@ export default defineComponent({
     ProductCard,
   },
   setup() {
-    const products: Ref<Product[]> = ref([]);
-
-    onMounted(async () => {
-      products.value = await getProducts();
-    });
-
-    async function getProducts(): Promise<Product[]> {
-      return new Promise((resolve) => {
-        resolve(productsApi);
-      });
-    }
-
+    const { products } = useProducts();
     return { products };
   },
 });

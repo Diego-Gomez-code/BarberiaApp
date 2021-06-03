@@ -1,9 +1,6 @@
 package com.proyectoweb.barberia.Products.Product.Domain;
 
-import com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductAmount;
-import com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductDescription;
-import com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductName;
-import com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.ProductPrice;
+import com.proyectoweb.barberia.Products.Product.Domain.ValueObjects.*;
 import com.proyectoweb.barberia.Shared.Domain.Products.ProductId;
 
 import java.util.HashMap;
@@ -16,13 +13,15 @@ public class Product {
     ProductAmount productAmount;
     ProductPrice productPrice;
     ProductDescription productDescription;
+    ProductImage productImage;
 
-    public Product(ProductId productId, ProductName productName, ProductAmount productAmount, ProductPrice productPrice, ProductDescription productDescription) {
+    public Product(ProductId productId, ProductName productName, ProductAmount productAmount, ProductPrice productPrice, ProductDescription productDescription, ProductImage productImage) {
         this.productId = productId;
         this.productName = productName;
         this.productAmount = productAmount;
         this.productPrice = productPrice;
         this.productDescription = productDescription;
+        this.productImage = productImage;
     }
 
     public Product(){}
@@ -34,15 +33,17 @@ public class Product {
             put("amount", productAmount.value());
             put("price", productPrice.value());
             put("description", productDescription.value());
+            put("image", productImage.value());
         }};
         return data;
     }
 
-    public void updateProduct(ProductName productName, ProductAmount productAmount, ProductPrice productPrice, ProductDescription productDescription){
+    public void updateProduct(ProductName productName, ProductAmount productAmount, ProductPrice productPrice, ProductDescription productDescription, ProductImage productImage){
         this.productName = productName;
         this.productAmount = productAmount;
         this.productPrice = productPrice;
         this.productDescription = productDescription;
+        this.productImage = productImage;
     }
 
     @Override
@@ -54,6 +55,7 @@ public class Product {
                 Objects.equals(productName, product.productName) &&
                 Objects.equals(productAmount, product.productAmount) &&
                 Objects.equals(productPrice, product.productPrice) &&
-                Objects.equals(productDescription, product.productDescription);
+                Objects.equals(productDescription, product.productDescription) &&
+                Objects.equals(productImage, product.productImage);
     }
 }
