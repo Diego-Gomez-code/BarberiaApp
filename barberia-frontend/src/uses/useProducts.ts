@@ -6,8 +6,8 @@ export function useProducts() {
   const products: Ref<Product[]> = ref([]);
 
   onMounted(async () => {
-    // products.value = await apiProducts.getProducts();
-    products.value = await apiProducts.getProductsApi();
+    products.value = await apiProducts.getProducts();
+    //products.value = await apiProducts.getProductsApi();
   });
 
   return { products };
