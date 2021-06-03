@@ -4,7 +4,7 @@
 		"name" : "Espuma de Afeitar",
 		"price" : 20000,
 		"amount" : 20,
-		"description" : "espumita fancy para afeitarse la carita.",
+		"description" : "espumita fancy para afeitarse la carita. json",
 		"image": "espuma.jpg"
 	},
 	{

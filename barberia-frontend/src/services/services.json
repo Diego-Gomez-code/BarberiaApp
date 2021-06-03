@@ -1,0 +1,16 @@
+[
+  {
+    "horarios": "null",
+    "price": 20000.0,
+    "name": "peluqueria de barbie",
+    "description": "peluqueria de barbie",
+    "id": "027df179-5e62-4e1d-8aca-daf51fe29145"
+  },
+  {
+    "horarios": "null",
+    "price": 5555.0,
+    "name": "peluqueria cambio2",
+    "description": "peluqueria cambio2",
+    "id": "10"
+  }
+]
