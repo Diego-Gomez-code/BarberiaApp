@@ -5,12 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping(value = "/carritocliente")
@@ -23,6 +21,14 @@ public class CreateCarritoClientePostController {
     public ResponseEntity execute(@RequestBody Request request){
         creator.execute(request.getId(), request.getUserId(), request.getCarritoCompraId(), request.getMetodoDePago());
         return ResponseEntity.status(HttpStatus.CREATED).body(null);
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<HashMap> handleRuntimeException(RuntimeException exception){
+        HashMap<String, String> response = new HashMap<String, String>() {{
+            put("error", exception.getMessage());
+        }};
+        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(response);
     }
 
     static class Request {

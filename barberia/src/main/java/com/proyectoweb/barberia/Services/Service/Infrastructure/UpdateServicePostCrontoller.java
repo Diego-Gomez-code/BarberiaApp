@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.*;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping(value = "/service")
@@ -21,6 +22,15 @@ public class UpdateServicePostCrontoller {
         serviceUpdate.execute(id, request.getName(), request.getDescription(), request.getPrice());
         return ResponseEntity.status(HttpStatus.OK).body(null);
     }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<HashMap> handleRuntimeException(RuntimeException exception){
+        HashMap<String, String> response = new HashMap<String, String>() {{
+            put("error", exception.getMessage());
+        }};
+        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(response);
+    }
+
     static class Request {
         private String name;
         private String description;

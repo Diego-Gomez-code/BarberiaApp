@@ -5,12 +5,10 @@ import com.proyectoweb.barberia.Services.Service.Application.Find.ServiceFindByI
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping(value = "/service")
@@ -24,4 +22,13 @@ public class FindByIdGetController {
         ServiceFindByIdResponse response = serviceFindById.execute(id);
         return ResponseEntity.status(HttpStatus.OK).body(response.response());
     }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<HashMap> handleRuntimeException(RuntimeException exception){
+        HashMap<String, String> response = new HashMap<String, String>() {{
+            put("error", exception.getMessage());
+        }};
+        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(response);
+    }
+
 }
