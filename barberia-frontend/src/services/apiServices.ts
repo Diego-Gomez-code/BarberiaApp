@@ -1,11 +1,11 @@
-import { Service } from "@/types/Service";
-import serviceApi from "@/services/services.json";
 import { services_all} from "@/config/urls";
+import servicesApi from "@/services/services.json"
+import {Service} from "@/types/Service";
 
 export const apiServices = {
     getServices: function (): Promise<Service[]> {
         return new Promise((resolve) => {
-            resolve(serviceApi)
+            resolve(servicesApi)
         });
     },
     getServicesApi(): Promise<Service[]> {

@@ -5,8 +5,8 @@
       <ServicesCard
           v-for="service in services"
           :key="service.name"
-          :service="service"
-      ></ServicesCard>
+          :service="service">
+      </ServicesCard>
     </div>
   </section>
 </template>
@@ -14,7 +14,7 @@
 <script lang="ts">
 import { defineComponent, onMounted, Ref, ref } from "vue";
 import { useServices } from "@/uses/useServices";
-import ServicesCard from "@/components/services/ServicesCard";
+import  ServicesCard from "@/components/services/ServicesCard.vue";
 
 export default defineComponent({
   name: "Services",

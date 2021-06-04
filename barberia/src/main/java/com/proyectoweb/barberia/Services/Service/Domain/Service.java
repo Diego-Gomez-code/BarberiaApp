@@ -2,6 +2,7 @@ package com.proyectoweb.barberia.Services.Service.Domain;
 
 import com.proyectoweb.barberia.Services.Schedule.Domain.Schedule;
 import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceDescription;
+import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceImage;
 import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceName;
 import com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServicePrice;
 import com.proyectoweb.barberia.Shared.Domain.Services.ServiceId;
@@ -19,20 +20,22 @@ public class Service {
     private ServiceDescription serviceDescription;
     private ServicePrice servicePrice;
     private Optional<List<Schedule>> schedules;
+    private ServiceImage image;
 
     public Service() {
     }
 
-    public Service(ServiceId serviceId, ServiceName serviceName, ServiceDescription serviceDescription, ServicePrice servicePrice, List<Schedule> schedules) {
+    public Service(ServiceId serviceId, ServiceName serviceName, ServiceDescription serviceDescription, ServicePrice servicePrice, List<Schedule> schedules, ServiceImage imagen) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.serviceDescription = serviceDescription;
         this.servicePrice = servicePrice;
         this.schedules = Optional.ofNullable(schedules);
+        this.image = imagen;
     }
 
     public static Service create(ServiceId serviceId, ServiceName serviceName, ServiceDescription serviceDescription, ServicePrice servicePrice){
-        return new Service( serviceId,  serviceName,  serviceDescription,  servicePrice, null);
+        return new Service( serviceId,  serviceName,  serviceDescription,  servicePrice, null, new ServiceImage("servicedefault.jpg"));
     }
 
     public boolean equalsById(String id){
@@ -46,6 +49,7 @@ public class Service {
             put("name", serviceName.value());
             put("description", serviceDescription.value());
             put("price", servicePrice.value());
+            put("image", image.value());
         }};
         return data;
     }

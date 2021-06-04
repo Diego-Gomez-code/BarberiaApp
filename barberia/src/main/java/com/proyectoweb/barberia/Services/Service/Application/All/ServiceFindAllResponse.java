@@ -17,11 +17,7 @@ public class ServiceFindAllResponse {
 
     public List<HashMap> response(){
         List<HashMap> response = services.stream().map(p -> p.data()).collect(Collectors.toList());
-        int cont = 0;
-        for (HashMap m: response) {
-            m.put("horarios", services.get(cont).getSchedules());
-            cont++;
-        }
+
         return response;
     }
 

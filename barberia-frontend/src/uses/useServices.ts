@@ -6,10 +6,8 @@ export function useServices(){
     const services: Ref<Service[]> = ref([]);
 
     onMounted(async () => {
-        services.value = await apiServices.getServices();
-        //services.value = await apiServices.getServicesApi();
+        //services.value = await apiServices.getServices();
+        services.value = await apiServices.getServicesApi();
     });
-
     return {services};
-
 }

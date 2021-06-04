@@ -1,5 +1,5 @@
 export interface Service {
-    horarios: string;
+    image:string;
     price:number;
     name: string;
     description: string;

@@ -11,6 +11,7 @@ import javax.websocket.server.PathParam;
 import java.util.HashMap;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:8081")
 @RequestMapping(value = "/service")
 public class FindByIdGetController {
 

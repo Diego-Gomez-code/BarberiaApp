@@ -1,13 +1,15 @@
 <template>
   <article class="card">
-    <a href="#">
-      <!--<img :src="actualService.image" alt="" class="card-img" />-->
+    <a href="#" v-bind:class="detalles" @click="detalles">
+      <router-link v-bind:to="'/services/detail/'+actualService.id">details</router-link>
+      <img :src="actualService.image" alt="" class="card-img" />
       <div class="card-info">
         <h3>{{ actualService.name }}</h3>
         <p class="card-lead">{{ actualService.description }}</p>
       </div>
     </a>
   </article>
+  <router-view/>
 </template>
 
 <script lang="ts">
@@ -26,7 +28,7 @@ export default defineComponent({
     const serviceCard: Ref<Service | null> = ref(null);
     onBeforeMount(() => {
       serviceCard.value = Object.assign({}, props.service);
-      //serviceCard.value.image = require(`@/assets/${serviceCard.value.image}`);
+      serviceCard.value.image = require(`@/assets/${serviceCard.value.image}`);
     });
     return { actualService: serviceCard };
   },

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Products from "../views/Products.vue";
 import Services from "../views/Services.vue";
+import DetailService from "../views/DetailService.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,6 +29,12 @@ const routes: Array<RouteRecordRaw> = [
     name: "Services",
     component: Services,
   },
+  {
+    path: "/services/detail/:id",
+    name: "Detail",
+    props: true,
+    component: DetailService,
+  }
 ];
 
 const router = createRouter({

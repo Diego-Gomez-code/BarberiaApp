@@ -20,6 +20,10 @@
             <property name="value" column="price" access="field" length="11" />
         </component>
 
+        <component name="image" class="com.proyectoweb.barberia.Services.Service.Domain.ValueObjects.ServiceImage" access="field">
+            <property name="value" column="image" access="field" type="string"/>
+        </component>
+
         <property name="schedules" column="horarios" access="field">
             <type name="com.proyectoweb.barberia.Services.Service.Infrastructure.Hibernates.ScheduleCustomType"/>
         </property>
