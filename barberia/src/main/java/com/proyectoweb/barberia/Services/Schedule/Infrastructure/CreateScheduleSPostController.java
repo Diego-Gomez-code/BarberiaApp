@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 import java.util.HashMap;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:8081")
 @RequestMapping(value = "/schedule")
 public class CreateScheduleSPostController {
 

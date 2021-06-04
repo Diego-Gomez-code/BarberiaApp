@@ -9,8 +9,7 @@
     </div>
     <input type="date" placeholder="fecha inicio" v-model="fecha" name="fech">
     <input type="time" placeholder="hora" v-model="hora" name="hour">
-    <button v-on:click="ver">Reservar</button>
-    <p>valor de fecha: {{fecha}} y de la hora {{hora}}</p>
+    <input type="button" value="Reservar" v-on:click="reservar">
   </section>
 </template>
 
@@ -44,10 +43,27 @@ export default {
       const r = await fetch(url);
       this.servicio = await r.json();
       console.log('service', this.servicio);
-    }
-  },
-  ver(){
-    console.log("entre a la funcion ver");
+    },
+    async reservar(){
+      console.log("entre a reservar");
+      this.horario = {
+        service_id: this.servicio.id,
+        datetime_start: this.fecha + " " +this.hora,
+        type: "p",
+        schedule_id: "prueba"
+      };
+      const url = "http://localhost:8090/schedule/create";
+      const payload = JSON.stringify(this.horario);
+      const r = await fetch(url,{
+        method: "POST",
+        body: payload,
+        headers: {
+          "Content-type": "application/json",
+        }
+      });
+      const response = await r.json();
+      console.log(response);
+    },
   },
 }
 </script>

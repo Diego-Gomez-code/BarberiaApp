@@ -342,10 +342,8 @@ com/proyectoweb/barberia/Shared/Domain/CarritoService/CarritoServiceId.java
 com/proyectoweb/barberia/Services/Schedule/Infrastructure/FindAllScheduleGetController.java
  com.proyectoweb.barberia.Services.Schedule.Infrastructure.FindAllScheduleGetController
  com.proyectoweb.barberia.Services.Schedule.Infrastructure.FindAllScheduleGetController$1
-com/proyectoweb/barberia/Services/Schedule/Infrastructure/CreateScheduleSPostController.java
- com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController
- com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController$1
- com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController$Request
+com/proyectoweb/barberia/Services/Service/Application/Find/ServiceFindByIdResponse.java
+ com.proyectoweb.barberia.Services.Service.Application.Find.ServiceFindByIdResponse
 com/proyectoweb/barberia/Products/Product/Infrastructure/Controllers/DeleteProductDeleteController.java
  com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.DeleteProductDeleteController
  com.proyectoweb.barberia.Products.Product.Infrastructure.Controllers.DeleteProductDeleteController$1
@@ -382,5 +380,7 @@ com/proyectoweb/barberia/Services/Service/Application/All/ServiceFindAllResponse
  com.proyectoweb.barberia.Services.Service.Application.All.ServiceFindAllResponse
 com/proyectoweb/barberia/Services/Service/Application/ScheduleUpdateService.java
  com.proyectoweb.barberia.Services.Service.Application.ScheduleUpdateService
-com/proyectoweb/barberia/Services/Service/Application/Find/ServiceFindByIdResponse.java
- com.proyectoweb.barberia.Services.Service.Application.Find.ServiceFindByIdResponse
+com/proyectoweb/barberia/Services/Schedule/Infrastructure/CreateScheduleSPostController.java
+ com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController
+ com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController$1
+ com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController$Request
