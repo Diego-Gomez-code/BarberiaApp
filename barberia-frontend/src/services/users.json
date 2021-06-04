@@ -1,0 +1,27 @@
+[
+  {
+    "email": "ejemplo1@gmail.com",
+    "password": "ejemplo1",
+    "role": "Administrador"
+  },
+  {
+    "email": "ejemplo2@gmail.com",
+    "password": "ejemplo2",
+    "role": "Administrador"
+  },
+  {
+    "email": "ejemplo3@gmail.com",
+    "password": "ejemplo3",
+    "role": "Administrador"
+  },
+  {
+    "email": "ejemplo4@gmail.com",
+    "password": "ejemplo4",
+    "role": "Administrador"
+  },
+  {
+    "email": "ejemplo5@gmail.com",
+    "password": "ejemplo5",
+    "role": "Administrador"
+  }
+]

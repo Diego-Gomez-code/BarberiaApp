@@ -5,11 +5,11 @@
       <router-link to="/products">Productos</router-link>
       <router-link to="/services">Servicios</router-link>
       <div class="profile">
-        <router-link to="/">Login</router-link>
+        <router-link to="/users/login">Login</router-link>
       </div>
     </div>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
