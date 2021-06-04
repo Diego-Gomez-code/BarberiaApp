@@ -5,7 +5,7 @@
     <div>
       <p>Servicio: {{servicio.name}}</p>
       <p>descripción: {{servicio.description}}</p>
-      <p>precio: {{servicio.price}}</p>
+      <p>precio: ${{servicio.price}}</p>
     </div>
     <input type="date" placeholder="fecha inicio" v-model="fecha" name="fech">
     <input type="time" placeholder="hora" v-model="hora" name="hour">
@@ -44,6 +44,7 @@ export default {
       this.servicio = await r.json();
       console.log('service', this.servicio);
     },
+
     async reservar(){
       console.log("entre a reservar");
       this.horario = {
@@ -52,6 +53,7 @@ export default {
         type: "p",
         schedule_id: "prueba"
       };
+
       const url = "http://localhost:8090/schedule/create";
       const payload = JSON.stringify(this.horario);
       const r = await fetch(url,{
@@ -62,7 +64,6 @@ export default {
         }
       });
       const response = await r.json();
-      console.log(response);
     },
   },
 }

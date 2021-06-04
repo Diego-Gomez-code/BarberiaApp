@@ -43,12 +43,6 @@
           <div class="text">Servicios</div>
         </div>
       </router-link>
-      <router-link tag="div" to="/services" class="container">
-        <img src="@/assets/barberia4.jpg" alt="" class="image" />
-        <div class="overlay">
-          <div class="text">Servicios</div>
-        </div>
-      </router-link>
     </div>
   </div>
 </template>

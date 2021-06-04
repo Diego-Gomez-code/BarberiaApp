@@ -79,8 +79,9 @@ com/proyectoweb/barberia/Products/CarritoCompra/Application/Find/CarritoCompraFi
  com.proyectoweb.barberia.Products.CarritoCompra.Application.Find.CarritoCompraFinder
 com/proyectoweb/barberia/Products/Product/Application/Find/ProductFinderResponse.java
  com.proyectoweb.barberia.Products.Product.Application.Find.ProductFinderResponse
-com/proyectoweb/barberia/security/WebSecurityConfig.java
- com.proyectoweb.barberia.security.WebSecurityConfig
+com/proyectoweb/barberia/Users/User/Infrastructure/LoginUserPostController.java
+ com.proyectoweb.barberia.Users.User.Infrastructure.LoginUserPostController
+ com.proyectoweb.barberia.Users.User.Infrastructure.Requestt
 com/proyectoweb/barberia/Users/User/Domain/Exceptions/EmailFormatError.java
  com.proyectoweb.barberia.Users.User.Domain.Exceptions.EmailFormatError
 com/proyectoweb/barberia/Products/Product/Domain/ValueObjects/ProductDescription.java
@@ -221,9 +222,8 @@ com/proyectoweb/barberia/Products/CarritoCompra/Application/Create/CreateCarrito
  com.proyectoweb.barberia.Products.CarritoCompra.Application.Create.CreateCarritoCompra
 com/proyectoweb/barberia/Users/User/Domain/ValueObjects/UserFirstName.java
  com.proyectoweb.barberia.Users.User.Domain.ValueObjects.UserFirstName
-com/proyectoweb/barberia/Users/User/Infrastructure/LoginUserPostController.java
- com.proyectoweb.barberia.Users.User.Infrastructure.LoginUserPostController
- com.proyectoweb.barberia.Users.User.Infrastructure.Requestt
+com/proyectoweb/barberia/Services/Service/Application/ScheduleUpdateService.java
+ com.proyectoweb.barberia.Services.Service.Application.ScheduleUpdateService
 com/proyectoweb/barberia/Shared/Domain/Aggregate/AggregateRoot.java
  com.proyectoweb.barberia.Shared.Domain.Aggregate.AggregateRoot
 com/proyectoweb/barberia/Products/CarritoCompra/Infrastructure/Controllers/RemoveProductCarritoPostController.java
@@ -274,10 +274,10 @@ com/proyectoweb/barberia/security/JWTAuthorizationFilter.java
  com.proyectoweb.barberia.security.JWTAuthorizationFilter
 com/proyectoweb/barberia/Services/Service/Domain/Exceptions/DescriptionNotValid.java
  com.proyectoweb.barberia.Services.Service.Domain.Exceptions.DescriptionNotValid
-com/proyectoweb/barberia/Services/Service/Application/ServiceUpdateSchedule.java
- com.proyectoweb.barberia.Services.Service.Application.ServiceUpdateSchedule
 com/proyectoweb/barberia/Shared/Infrastructure/Bus/Event/Spring/SpringApplicationEventBus.java
  com.proyectoweb.barberia.Shared.Infrastructure.Bus.Event.Spring.SpringApplicationEventBus
+com/proyectoweb/barberia/Services/Service/Application/ServiceUpdateSchedule.java
+ com.proyectoweb.barberia.Services.Service.Application.ServiceUpdateSchedule
 com/proyectoweb/barberia/Services/Schedule/Domain/Schedule.java
  com.proyectoweb.barberia.Services.Schedule.Domain.Schedule
  com.proyectoweb.barberia.Services.Schedule.Domain.Schedule$1
@@ -378,8 +378,8 @@ com/proyectoweb/barberia/Services/Service/Application/All/ServiceFindAll.java
  com.proyectoweb.barberia.Services.Service.Application.All.ServiceFindAll
 com/proyectoweb/barberia/Services/Service/Application/All/ServiceFindAllResponse.java
  com.proyectoweb.barberia.Services.Service.Application.All.ServiceFindAllResponse
-com/proyectoweb/barberia/Services/Service/Application/ScheduleUpdateService.java
- com.proyectoweb.barberia.Services.Service.Application.ScheduleUpdateService
+com/proyectoweb/barberia/security/WebSecurityConfig.java
+ com.proyectoweb.barberia.security.WebSecurityConfig
 com/proyectoweb/barberia/Services/Schedule/Infrastructure/CreateScheduleSPostController.java
  com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController
  com.proyectoweb.barberia.Services.Schedule.Infrastructure.CreateScheduleSPostController$1

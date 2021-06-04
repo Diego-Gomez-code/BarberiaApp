@@ -41,6 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/carritocliente/create").permitAll()
                 //Schedule endpoint
                 .antMatchers(HttpMethod.POST, "/schedule/create").permitAll()
+                .antMatchers(HttpMethod.PUT, "/schedule/create").permitAll()
                 .antMatchers(HttpMethod.GET, "/schedule/findAll").permitAll()
                 .antMatchers(HttpMethod.POST, "/schedule/delete/{id}").permitAll()
                 .antMatchers(HttpMethod.POST, "/schedule/update/{id}").permitAll()
